@@ -2,6 +2,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+/* Enabling math equations */
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -44,6 +47,17 @@ const config: Config = {
   },
   themes: ["@docusaurus/theme-mermaid"],
 
+  // Include the KaTeX CSS in your config under stylesheets:
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
+    },
+  ],
+
   presets: [
     [
       "classic",
@@ -53,6 +67,8 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/AdrianoRuseler/site/edit/main/",
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -123,8 +139,12 @@ const config: Config = {
               href: "https://adrianoruseler.github.io/my-docs/",
             },
             {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "STM32 Docs",
+              href: "https://ruseleredu.github.io/stm32doc/",
+            },
+            {
+              label: "My DocPage",
+              href: "https://ruseleredu.github.io/my-docpage/",
             },
           ],
         },

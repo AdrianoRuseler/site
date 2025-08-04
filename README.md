@@ -14,6 +14,12 @@ npx create-docusaurus@latest site classic --typescript
 npm install --save @docusaurus/theme-mermaid
 ```
 
+[Math Equations](https://docusaurus.io/docs/markdown-features/math-equations)
+
+```bash
+npm install --save remark-math@6 rehype-katex@7
+```
+
 ## Clone repo
 
 ```bash
