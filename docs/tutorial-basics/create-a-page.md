@@ -15,8 +15,8 @@ Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 Create a file at `src/pages/my-react-page.js`:
 
 ```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
+import React from "react";
+import Layout from "@theme/Layout";
 
 export default function MyReactPage() {
   return (
@@ -41,3 +41,34 @@ This is a Markdown page
 ```
 
 A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+
+## Markdown front matter
+
+Markdown documents can use the following Markdown [front matter metadata fields](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter), enclosed by a line `---` on either side.
+
+```mdx title="src/pages/my-markdown-page.md"
+---
+id: doc-markdown
+title: Docs Markdown Features
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: Markdown
+sidebar_position: 3
+pagination_label: Markdown features
+custom_edit_url: https://github.com/facebook/docusaurus/edit/main/docs/api-doc-markdown.md
+description: How do I find you when I cannot solve this problem
+keywords:
+  - docs
+  - docusaurus
+tags: [docusaurus]
+image: https://i.imgur.com/mErPwqL.png
+slug: /myDoc
+last_update:
+  date: 1/1/2000
+  author: custom author name
+---
+
+# Markdown Features
+
+My Document Markdown content
+```

@@ -73,9 +73,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Adriano Ruseler",
       logo: {
-        alt: "My Site Logo",
+        alt: "Adriano Ruseler Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -100,21 +100,21 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Docusaurus",
+              href: "https://docusaurus.io/docs",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Sites",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Moodle Docs",
+              href: "https://adrianoruseler.github.io/moodle-docs/",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "My Docs",
+              href: "https://adrianoruseler.github.io/my-docs/",
             },
             {
               label: "X",
