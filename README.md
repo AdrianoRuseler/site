@@ -8,6 +8,12 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 npx create-docusaurus@latest site classic --typescript
 ```
 
+[Diagrams](https://docusaurus.io/docs/markdown-features/diagrams)
+
+```bash
+npm install --save @docusaurus/theme-mermaid
+```
+
 ## Clone repo
 
 ```bash
