@@ -8,10 +8,11 @@ import rehypeKatex from "rehype-katex";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Prof. Adriano Ruseler, Dr. Eng.",
+  tagline:
+    "PhD in Electrical Engineering in the area of Power Electronics and Electrical Drive.",
   favicon: "img/favicon.ico",
-
+  // PhD in Electrical Engineering in the area of Power Electronics and Electrical Drive.
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
