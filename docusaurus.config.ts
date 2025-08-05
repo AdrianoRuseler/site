@@ -129,6 +129,60 @@ const config: Config = {
           ],
         },
         {
+          title: "UTFPR",
+          items: [
+            {
+              label: "Webmail",
+              href: "https://webmail.utfpr.edu.br/",
+            },
+            {
+              label: "Sistemas",
+              href: "https://sistemas2.utfpr.edu.br/",
+            },
+            {
+              label: "SEI",
+              href: "https://sei.utfpr.edu.br/",
+            },
+            {
+              label: "Chat",
+              href: "https://chat.utfpr.edu.br/",
+            },
+            {
+              label: "Ajuda",
+              href: "https://ajuda.utfpr.edu.br/",
+            },
+          ],
+        },
+        {
+          title: "Sistemas",
+          items: [
+            {
+              label: "Consulta Diários",
+              href: "https://sistemas2.utfpr.edu.br/url/1141",
+            },
+            {
+              label: "Permanências",
+              href: "https://sistemas2.utfpr.edu.br/url/1026",
+            },
+            {
+              label: "Planejamento de Aula",
+              href: "https://sistemas2.utfpr.edu.br/url/1890",
+            },
+            {
+              label: "Lançamentos",
+              href: "https://sistemas2.utfpr.edu.br/url/1514",
+            },
+            {
+              label: "Mapa de Professor",
+              href: "https://sistemas2.utfpr.edu.br/url/1022",
+            },
+            {
+              label: "Mapa de Sala",
+              href: "https://sistemas2.utfpr.edu.br/url/1934",
+            },
+          ],
+        },
+        {
           title: "Sites",
           items: [
             {
@@ -153,8 +207,8 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Docusaurus",
+              href: "https://docusaurus.io/docs",
             },
             {
               label: "GitHub",

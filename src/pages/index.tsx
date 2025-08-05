@@ -28,16 +28,16 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             href="https://repositorio.ufsc.br/handle/123456789/95122"
           >
-            Master's📝
+            Master's 📜
           </Link>
           <Link
             className="button button--secondary button--lg"
             href="https://repositorio.ufsc.br/handle/123456789/173824"
           >
-            Thesis 📝
+            Thesis 📜
           </Link>
           <Link className="button button--secondary button--lg" to="/blog">
-            Blog 📝
+            Blog 🏢
           </Link>
         </div>
       </div>

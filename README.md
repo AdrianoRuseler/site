@@ -41,7 +41,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ```bash
 npm run build
-npm run server
+npm run serve
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
