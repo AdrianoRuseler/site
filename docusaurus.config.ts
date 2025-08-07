@@ -120,17 +120,41 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Sites",
           items: [
             {
-              label: "Docusaurus",
-              href: "https://docusaurus.io/docs",
+              label: "Adriano Ruseler",
+              href: "https://adrianoruseler.com/",
+            },
+            {
+              label: "Wiki",
+              href: "https://wiki.adrianoruseler.com/",
+            },
+            {
+              label: "OpenWiki",
+              href: "https://openwiki.adrianoruseler.com/",
+            },
+            {
+              label: "Moodle",
+              href: "https://moodle.adrianoruseler.com/",
+            },
+            {
+              label: "Genealogy",
+              href: "https://genealogy.adrianoruseler.com/",
+            },
+            {
+              label: "Webtrees",
+              href: "https://webtrees.adrianoruseler.com/",
             },
           ],
         },
         {
           title: "UTFPR",
           items: [
+            {
+              label: "Moodle",
+              href: "https://moodle.utfpr.edu.br/",
+            },
             {
               label: "Webmail",
               href: "https://webmail.utfpr.edu.br/",
@@ -183,7 +207,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Sites",
+          title: "Doku Sites",
           items: [
             {
               label: "Moodle Docs",
@@ -200,6 +224,39 @@ const config: Config = {
             {
               label: "My DocPage",
               href: "https://ruseleredu.github.io/my-docpage/",
+            },
+          ],
+        },
+        {
+          title: "Social",
+          items: [
+            {
+              label: "YouTube",
+              href: "https://www.youtube.com/@Rusla82",
+            },
+            {
+              label: "YouTube Edu",
+              href: "https://www.youtube.com/@adrianoruseler653",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/AdrianoRuseler/",
+            },
+            {
+              label: "GitHub Edu",
+              href: "https://github.com/ruseleredu/",
+            },
+            {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/adrianoruseler/",
+            },
+            {
+              label: "ResearchGate",
+              href: "https://www.researchgate.net/profile/Adriano-Ruseler/",
+            },
+            {
+              label: "ORCID",
+              href: "https://orcid.org/0000-0003-0915-9483",
             },
           ],
         },
