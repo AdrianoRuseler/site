@@ -268,6 +268,10 @@ const config: Config = {
               href: "https://docusaurus.io/docs",
             },
             {
+              label: " Markdown Guide",
+              href: "https://www.markdownguide.org/",
+            },
+            {
               label: "GitHub",
               href: "https://github.com/AdrianoRuseler/site",
             },
