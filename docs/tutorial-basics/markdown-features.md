@@ -6,6 +6,8 @@ sidebar_position: 4
 
 Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
 
+- https://www.markdownguide.org/tools/docusaurus/
+
 ## Front Matter
 
 Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
@@ -132,19 +134,19 @@ This is <Highlight color="#1877F2">Facebook blue</Highlight> !
 ```
 
 export const Highlight = ({children, color}) => (
-  <span
-    style={{
+<span
+style={{
       backgroundColor: color,
       borderRadius: '20px',
       color: '#fff',
       padding: '10px',
       cursor: 'pointer',
     }}
-    onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`);
-    }}>
-    {children}
-  </span>
+onClick={() => {
+alert(`You clicked the color ${color} with label ${children}`);
+}}>
+{children}
+</span>
 );
 
 This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
