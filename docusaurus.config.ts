@@ -189,7 +189,7 @@ const config: Config = {
               href: "https://sistemas2.utfpr.edu.br/url/1026",
             },
             {
-              label: "Planejamento de Aula",
+              label: "Planejamento Aulas",
               href: "https://sistemas2.utfpr.edu.br/url/1890",
             },
             {
@@ -203,27 +203,6 @@ const config: Config = {
             {
               label: "Mapa de Sala",
               href: "https://sistemas2.utfpr.edu.br/url/1934",
-            },
-          ],
-        },
-        {
-          title: "Doku Sites",
-          items: [
-            {
-              label: "Moodle Docs",
-              href: "https://adrianoruseler.github.io/moodle-docs/",
-            },
-            {
-              label: "My Docs",
-              href: "https://adrianoruseler.github.io/my-docs/",
-            },
-            {
-              label: "STM32 Docs",
-              href: "https://ruseleredu.github.io/stm32doc/",
-            },
-            {
-              label: "My DocPage",
-              href: "https://ruseleredu.github.io/my-docpage/",
             },
           ],
         },
@@ -261,19 +240,70 @@ const config: Config = {
           ],
         },
         {
+          title: "Doku Sites",
+          items: [
+            {
+              label: "Moodle Docs",
+              href: "https://adrianoruseler.github.io/moodle-docs/",
+            },
+            {
+              label: "My Docs",
+              href: "https://adrianoruseler.github.io/my-docs/",
+            },
+            {
+              label: "STM32 Docs",
+              href: "https://ruseleredu.github.io/stm32doc/",
+            },
+            {
+              label: "My DocPage",
+              href: "https://ruseleredu.github.io/my-docpage/",
+            },
+          ],
+        },
+
+        {
+          title: "Downloads",
+          items: [
+            {
+              label: "ReleaseBB",
+              href: "https://rlsbb.ru/",
+            },
+            {
+              label: "LibGen",
+              href: "https://libgen.li/",
+            },
+            {
+              label: "Sci-Hub",
+              href: "https://sci-hub.se/",
+            },
+            {
+              label: "SolidSQUAD",
+              href: "https://x.com/TeAMSolidSQUAD",
+            },
+            {
+              label: "haxNode",
+              href: "http://haxnode.net/",
+            },
+          ],
+        },
+        {
           title: "More",
           items: [
             {
-              label: "Docusaurus",
-              href: "https://docusaurus.io/docs",
+              label: "TorrentFreak",
+              href: "https://torrentfreak.com/",
             },
             {
-              label: " Markdown Guide",
-              href: "https://www.markdownguide.org/",
+              label: "uIndex",
+              href: "https://uindex.org/",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/AdrianoRuseler/site",
+              label: "1377X",
+              href: "https://www.1377x.to/",
+            },
+            {
+              label: "YTS",
+              href: "https://yts-official.mx/",
             },
           ],
         },
