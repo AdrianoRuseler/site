@@ -11,22 +11,20 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Universidade Tecnológica Federal do Paraná',
+    Svg: require('@site/static/img/UTFPR_logo.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        More info here...
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Universidade Federal de Santa Catarina',
+    Svg: require('@site/static/img/brasao_UFSC_vertical_extenso.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        More info here...
       </>
     ),
   },
@@ -69,3 +67,4 @@ export default function HomepageFeatures(): ReactNode {
     </section>
   );
 }
+
