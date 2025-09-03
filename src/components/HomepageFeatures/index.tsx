@@ -29,12 +29,11 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Departamento Acadêmico de Eletrotécnica - DAELT',
+    Svg: require('@site/static/img/LogoDAELT.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+       More info here...
       </>
     ),
   },
