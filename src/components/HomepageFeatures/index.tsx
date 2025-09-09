@@ -1,47 +1,66 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
 
 type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  title: React.ReactNode; // Changed to ReactNode to allow links
+  Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Universidade Tecnológica Federal do Paraná',
-    Svg: require('@site/static/img/UTFPR_logo.svg').default,
+    title: (
+      <Link to="https://www.utfpr.edu.br">
+        Universidade Tecnológica Federal do Paraná (UTFPR)
+      </Link>
+    ),
+    Svg: require("@site/static/img/UTFPR_logo.svg").default,
     description: (
       <>
-        More info here...
+        UTFPR is one of the most renowned Universities in Brazil. Their teaching
+        pattern is inspired by the European polytechnic university model. It
+        specializes in natural sciences and engineering.
+      </>
+    ),
+  }, // https://ufsc.br/
+  {
+    title: (
+      <Link to="https://ufsc.br/">
+        Universidade Federal de Santa Catarina (UFSC)
+      </Link>
+    ),
+    Svg: require("@site/static/img/brasao_UFSC_vertical_extenso.svg").default,
+    description: (
+      <>
+        The history of the Federal University of Santa Catarina has its roots in
+        the Polytechnic Institute of Florianópolis founded on 13 March of 1917
+        by José Arthur Boiteux.
       </>
     ),
   },
   {
-    title: 'Universidade Federal de Santa Catarina',
-    Svg: require('@site/static/img/brasao_UFSC_vertical_extenso.svg').default,
-    description: (
-      <>
-        More info here...
-      </>
+    title: (
+      <Link to="https://utfpr.curitiba.br/daelt/">
+        Departamento Acadêmico de Eletrotécnica (DAELT)
+      </Link>
     ),
-  },
-  {
-    title: 'Departamento Acadêmico de Eletrotécnica - DAELT',
-    Svg: require('@site/static/img/LogoDAELT.svg').default,
+    Svg: require("@site/static/img/LogoDAELT.svg").default,
     description: (
       <>
-       More info here...
+        Academic Department of Electrotechnics at the Curitiba Campus of UTFPR
+        is responsible for organizing teaching, research, and extension
+        activities in the field of Electrical and Control Engineering.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -66,4 +85,3 @@ export default function HomepageFeatures(): ReactNode {
     </section>
   );
 }
-
