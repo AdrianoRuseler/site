@@ -292,6 +292,10 @@ const config: Config = {
             {
               label: "TorrentFreak",
               href: "https://torrentfreak.com/",
+            }, //
+            {
+              label: "Torrends",
+              href: "https://torrends.to/",
             },
             {
               label: "uIndex",
