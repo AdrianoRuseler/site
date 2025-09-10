@@ -287,8 +287,12 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
+          title: "More", //
           items: [
+            {
+              label: "TV Maze",
+              href: "https://www.tvmaze.com/",
+            }, //
             {
               label: "TorrentFreak",
               href: "https://torrentfreak.com/",
