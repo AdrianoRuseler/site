@@ -92,6 +92,20 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "utfpr", // Unique ID for this docs instance
+        path: "utfpr", // Path to your API docs folder
+        routeBasePath: "utfpr", // Base URL for these docs (e.g., yoursite.com/api/...)
+        sidebarPath: require.resolve("./sidebarsutfpr.js"), // Separate sidebar for API docs
+        // ... other options specific to your API docs
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
@@ -106,7 +120,13 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Wiki",
+        },
+        {
+          to: "/utfpr/utfpr-about", // Link to a page in your UTFPR docs
+          label: "UTFPR",
+          position: "left",
+          activeBaseRegex: `/utfpr/`, // Highlight when any UTFPR doc is active
         },
         { to: "/blog", label: "Blog", position: "left" },
         {

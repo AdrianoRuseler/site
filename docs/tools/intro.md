@@ -1,5 +1,5 @@
 ---
-id: utfpr-about
+id: tools-about
 sidebar_position: 1
 title: About
 description: My document description
