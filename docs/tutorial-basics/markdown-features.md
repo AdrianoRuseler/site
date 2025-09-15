@@ -59,6 +59,8 @@ You can reference images relative to the current file as well. This is particula
 ![Docusaurus logo](./img/docusaurus.png)
 ```
 
+![HIL402](/img/HIL402_Side_Transparent.webp)
+
 ## Code Blocks
 
 Markdown code blocks are supported with Syntax highlighting.

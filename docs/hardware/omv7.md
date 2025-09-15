@@ -18,13 +18,13 @@ openmediavault is the next generation network attached storage (NAS) solution ba
 
 Odroid-HC1 Armbian Bookworm OMV7 Install
 
-https://www.openmediavault.org/
-https://www.hardkernel.com/shop/odroid-hc1-home-cloud-one/
-https://wiki.omv-extras.org/doku.php?id=start
-https://wiki.omv-extras.org/doku.php?id=omv7:armbian_bookworm_install
-https://www.armbian.com/odroid-xu4/
-https://www.chiark.greenend.org.uk/~sgtatham/putty/
-https://angryip.org/
+- https://www.openmediavault.org/
+- https://www.hardkernel.com/shop/odroid-hc1-home-cloud-one/
+- https://wiki.omv-extras.org/doku.php?id=start
+- https://wiki.omv-extras.org/doku.php?id=omv7:armbian_bookworm_install
+- https://www.armbian.com/odroid-xu4/
+- https://www.chiark.greenend.org.uk/~sgtatham/putty/
+- https://angryip.org/
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/upkjGlFOr5w?si=6Tq3CNYEqTPRx9Gk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
