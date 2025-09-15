@@ -195,6 +195,10 @@ const config: Config = {
               label: "Ajuda",
               href: "https://ajuda.utfpr.edu.br/",
             },
+            {
+              label: "Calendário",
+              href: "https://www.utfpr.edu.br/alunos/calendario",
+            },
           ],
         },
         {
