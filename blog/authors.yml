@@ -1,25 +1,30 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
+djstudio:
+  name: DJ Studio
+  title: The Ultimate tool for DJs to create DJ mixes and Mashups with AI and STEM separation.
+  url: https://linktr.ee/dj.studio
+  image_url: https://store-images.s-microsoft.com/image/apps.17098.13599865905067450.439aa3c6-8530-4ca3-bad4-f40bb90c6b2f.704c0fa6-df6b-4414-8d39-890e3100e45f?h=115
+  # page:
+  # customize the url of the author page at /blog/authors/<permalink>
+  #   permalink: "/all-dj-studio-articles"
+  page: false
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    x: DJstudio_app
+    youtube: djstudioapp
+    instagram: djstudio_app
+    #    facebook: DJStudioApp
+    #    tiktok: djstudio_app
+    #    reddit: djstudio
+    # linkedin: djstudioapp
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+midtownjack:
+  name: Midtown Jack
+  title: Music Producer making loud noises, DJing across Australia.
+  url: https://midtownjack.com/
+  image_url: https://i1.sndcdn.com/avatars-IbRNkh6XIaUAQgcD-Ild6hw-t200x200.jpg
+  # page:
+  # customize the url of the author page at /blog/authors/<permalink>
+  #  permalink: "/all-midtown-jack-articles"
+  page: false
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    youtube: MidtownJack
+    soundcloud: midtownjack

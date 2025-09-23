@@ -10,7 +10,6 @@ description: Informações gerais sobre a disciplina ELT72B.
 
 - https://github.com/AdrianoRuseler/ELT72B
 - https://github.com/AdrianoRuseler/quiz2matlab
--
 
 ## Simuladores
 
