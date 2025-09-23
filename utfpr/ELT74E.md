@@ -1,5 +1,5 @@
 ---
-id: utfpr-ELT74E
+id: ELT74E
 title: ELT74E - Amplificadores Operacionais e Semicondutores
 description: Informações gerais sobre a disciplina ELT74E.
 ---
