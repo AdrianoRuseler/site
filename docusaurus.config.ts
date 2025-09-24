@@ -123,7 +123,7 @@ const config: Config = {
           label: "Wiki",
         },
         {
-          to: "/utfpr/utfpr-about", // Link to a page in your UTFPR docs
+          to: "/utfpr/about", // Link to a page in your UTFPR docs
           label: "UTFPR",
           position: "left",
           activeBaseRegex: `/utfpr/`, // Highlight when any UTFPR doc is active
