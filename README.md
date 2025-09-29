@@ -56,3 +56,11 @@ npm run deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Upgrade Docusaurus
+
+To upgrade Docusaurus packages with the latest version, run the following command:
+
+```bash
+npm i @docusaurus/core@latest @docusaurus/preset-classic@latest @docusaurus/theme-mermaid@latest @docusaurus/module-type-aliases@latest @docusaurus/tsconfig@latest @docusaurus/types@latest
+```
