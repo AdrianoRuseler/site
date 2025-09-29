@@ -32,7 +32,11 @@ const config: Config = {
   trailingSlash: false, // Set to true if you want to add a trailing slash to all URLs.
 
   onBrokenLinks: "warn", // 'warn' or 'ignore'
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn", // or 'throw'
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
