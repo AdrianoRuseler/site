@@ -33,6 +33,7 @@ const config: Config = {
 
   onBrokenLinks: "warn", // 'warn' or 'ignore'
   markdown: {
+    mermaid: true, // Diagrams can be rendered using Mermaid in a code block.
     hooks: {
       onBrokenMarkdownLinks: "warn", // or 'throw'
     },
@@ -46,10 +47,6 @@ const config: Config = {
     locales: ["en"],
   },
 
-  /* Diagrams can be rendered using Mermaid in a code block. */
-  markdown: {
-    mermaid: true,
-  },
   themes: ["@docusaurus/theme-mermaid"],
 
   // Include the KaTeX CSS in your config under stylesheets:
