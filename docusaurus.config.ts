@@ -200,6 +200,10 @@ const config: Config = {
               label: "Calendário",
               href: "https://www.utfpr.edu.br/alunos/calendario",
             },
+            {
+              label: "TCC",
+              href: "https://nupet.daelt.ct.utfpr.edu.br/tcc/engenharia/index.html",
+            },
           ],
         },
         {
