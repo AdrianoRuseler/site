@@ -1,8 +1,6 @@
 {
   "position": 2,
   "label": "ELT72B - Sistemas Digitais",
-  "collapsible": true,
-  "collapsed": false,
   "className": "category-highlight",
   "link": {
     "type": "generated-index",
