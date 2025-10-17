@@ -3,6 +3,7 @@ id: ELT72B-qbank
 title: Banco de questões
 sidebar_position: 2
 description: Banco de questões da disciplina ELT72B.
+slug: /ELT72B/qbank
 ---
 
 ## Banco de questões

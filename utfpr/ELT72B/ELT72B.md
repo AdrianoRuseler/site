@@ -3,6 +3,7 @@ id: ELT72B-intro
 title: Informações gerais
 sidebar_position: 1
 description: Informações gerais sobre a disciplina ELT72B.
+slug: /ELT72B/intro
 ---
 
 ## Sistemas Digitais

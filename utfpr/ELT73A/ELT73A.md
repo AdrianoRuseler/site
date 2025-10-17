@@ -3,6 +3,7 @@ id: ELT73A-info
 title: Informações gerais
 sidebar_position: 1
 description: Informações gerais sobre a disciplina ELT73A.
+slug: /ELT73A/intro
 ---
 
 ## Sistemas Microcontrolados

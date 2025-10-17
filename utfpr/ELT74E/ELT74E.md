@@ -2,6 +2,7 @@
 id: ELT74E
 title: Informações gerais
 description: Informações gerais sobre a disciplina ELT74E.
+slug: /ELT74E/intro
 ---
 
 ---
@@ -21,13 +22,6 @@ description: Informações gerais sobre a disciplina ELT74E.
 | **Ementa**                                  | Fundamentos dos Semicondutores. Diodos Semicondutores. Diodos Especiais, Sensores e Atuadores. Aplicação dos Diodos Semicondutores. Retificadores Não Controlados Monofásicos. Transistor Bipolar de Junção. Transistor de Efeito de Campo. Aplicação de Transistores. Semicondutores de Potência. Amplificadores Operacionais. Aplicação de Amplificadores Operacionais. Filtros Analógicos. Osciladores. Simulação de Circuitos Eletrônicos. Projeto de Circuito Impresso. |
 
 ---
-
-## Banco de questões
-
-### AOS QUIZES Setup
-
-- https://github.com/AdrianoRuseler/AOS-QUIZES
-- https://github.com/AdrianoRuseler/quiz2matlab
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fjl-JvZ7XEU?si=9mCpzaMCJrrq5qw6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
