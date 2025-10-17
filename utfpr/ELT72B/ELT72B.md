@@ -36,11 +36,6 @@ Sistemas de Numeração e Códigos; Portas Lógicas e Álgebra Booleana; Anális
 |  15   | Dispositivos de Memórias                          | RAM ROM EPROM FLASH Técnicas de implementação                                                                      |
 |  16   | Conversores Analógico/Digital e Digital/Analógico | Técnicas de conversão Tempo deconversão R e de R-2R                                                                |
 
-## Banco de questões
-
-- https://github.com/AdrianoRuseler/ELT72B
-- https://github.com/AdrianoRuseler/quiz2matlab
-
 ## Simuladores
 
 ### Off-line
