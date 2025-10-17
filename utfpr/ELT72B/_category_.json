@@ -1,8 +1,13 @@
 {
-  "label": "ELT72B - Sistemas Digitais",
   "position": 2,
+  "label": "ELT72B - Sistemas Digitais",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "category-highlight",
   "link": {
     "type": "generated-index",
-    "description": "ELT72B - Semestres."
+    "title": "ELT72B - Sistemas Digitais",
+    "description": "ELT72B - Sistemas Digitais related documentation and resources.",
+    "slug": "/ELT72B-folder"
   }
 }

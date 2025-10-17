@@ -1,8 +1,10 @@
 ---
 id: about
 sidebar_position: 1
-title: About
-description: My document description
+title: Sobre
+description: Sobre minhas disciplinas
 ---
 
-# UTFPR Intro
+## UTFPR Intro
+
+### ELT72B

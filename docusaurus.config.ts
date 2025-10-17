@@ -218,7 +218,7 @@ const config: Config = {
               href: "https://sistemas2.utfpr.edu.br/url/1026",
             },
             {
-              label: "Planejamento Aulas",
+              label: "Planejamento",
               href: "https://sistemas2.utfpr.edu.br/url/1890",
             },
             {
@@ -272,16 +272,24 @@ const config: Config = {
           title: "Doku Sites",
           items: [
             {
+              label: "Main Site",
+              href: "https://adrianoruseler.github.io/site/",
+            },
+            {
+              label: "STM32 Docs",
+              href: "https://ruseleredu.github.io/stm32doc/",
+            },
+            {
+              label: "LabSEC",
+              href: "https://ruseleredu.github.io/labsec/",
+            },
+            {
               label: "Moodle Docs",
               href: "https://adrianoruseler.github.io/moodle-docs/",
             },
             {
               label: "My Docs",
               href: "https://adrianoruseler.github.io/my-docs/",
-            },
-            {
-              label: "STM32 Docs",
-              href: "https://ruseleredu.github.io/stm32doc/",
             },
             {
               label: "My DocPage",
