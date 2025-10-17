@@ -1,7 +1,8 @@
 ---
-id: e-learning-tools
-title: E-Learning Tools
+id: e-learning-tools-intro
+title: Intro
 description: List of E-Learning Tools
+slug: /tools/e-learning-tools/intro
 ---
 
 # E-Learning Tools

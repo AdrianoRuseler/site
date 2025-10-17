@@ -297,7 +297,6 @@ const config: Config = {
             },
           ],
         },
-
         {
           title: "Downloads",
           items: [
