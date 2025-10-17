@@ -1,6 +1,6 @@
 ---
 id: ELT82E
-title: ELT82E - Eletrônica Analógica
+title: Informações gerais
 description: Informações gerais sobre a disciplina ELT82E.
 ---
 

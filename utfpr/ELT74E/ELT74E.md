@@ -1,6 +1,6 @@
 ---
 id: ELT74E
-title: ELT74E - Amplificadores Operacionais e Semicondutores
+title: Informações gerais
 description: Informações gerais sobre a disciplina ELT74E.
 ---
 

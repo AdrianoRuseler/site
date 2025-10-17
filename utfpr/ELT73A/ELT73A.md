@@ -1,6 +1,6 @@
 ---
-id: ELT73A
-title: ELT73A - Sistemas Microcontrolados
+id: ELT73A-info
+title: Informações gerais
 description: Informações gerais sobre a disciplina ELT73A.
 ---
 
