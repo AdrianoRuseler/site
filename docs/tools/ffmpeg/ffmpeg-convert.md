@@ -1,7 +1,8 @@
 ---
-id: ffmpeg
-title: ffmpeg
+id: ffmpeg-convert
+title: Convert Audio to *.?
 description: A complete, cross-platform solution to record, convert and stream audio and video.
+slug: /tools/ffmpeg/audio/convert
 ---
 
 ## Convert to mp3
