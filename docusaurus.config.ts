@@ -210,6 +210,10 @@ const config: Config = {
           title: "Sistemas",
           items: [
             {
+              label: "Sigepe",
+              href: "https://sougov.sigepe.gov.br/sougov/Home",
+            },
+            {
               label: "Consulta Diários",
               href: "https://sistemas2.utfpr.edu.br/url/1141",
             },
