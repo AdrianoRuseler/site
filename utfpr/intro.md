@@ -1,10 +1,12 @@
 ---
 id: about
 sidebar_position: 1
-title: Sobre
+title: Calendário Acadêmico
 description: Sobre minhas disciplinas
 ---
 
-## UTFPR Intro
+## [UTFPR-CT 2025](/pdf/UTFPR-CTAcademicCalendar2025.pdf)
 
-### ELT72B
+## UTFPR-CT 2026
+
+![2026](/img/CalendarioCuritiba2026.png)
