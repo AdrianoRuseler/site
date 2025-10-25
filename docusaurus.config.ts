@@ -124,11 +124,34 @@ const config: Config = {
           label: "Wiki",
         },
         {
-          to: "/utfpr/about", // Link to a page in your UTFPR docs
           label: "UTFPR",
+          to: "/utfpr/about", // Link to a page in your UTFPR docs
+          type: "dropdown",
           position: "left",
-          activeBaseRegex: `/utfpr/`, // Highlight when any UTFPR doc is active
+          items: [
+            {
+              to: "/utfpr/ELT72B/folder", // Link to a page in your UTFPR docs
+              label: "ELT72B - Sistemas Digitais",
+            },
+            {
+              to: "/utfpr/ELT73A/folder", // Link to a page in your UTFPR docs
+              label: "ELT73A - Sistemas Microcontrolados",
+            },
+            {
+              to: "/utfpr/ELT82E/folder", // Link to a page in your UTFPR docs
+              label: "ELT82E - Eletrônica Analógica",
+            },
+            {
+              to: "/utfpr/ELT74E/folder", // Link to a page in your UTFPR docs
+              label: "ELT74E - Amplificadores Operacionais e Semicondutores",
+            },
+            {
+              to: "/utfpr/ET76C/folder", // Link to a page in your UTFPR docs
+              label: "ET76C - Eletrônica de Potência",
+            },
+          ],
         },
+
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/AdrianoRuseler/site",
