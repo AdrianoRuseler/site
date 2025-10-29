@@ -18,7 +18,7 @@ const formatter = new Intl.DateTimeFormat("pt-BR", {
   hourCycle: "h23", // Use 24-hour format
 });
 const utc3Time = formatter.format(new Date());
-const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} Adriano Ruseler, Inc. Built with Docusaurus at ${utc3Time}.`;
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} Adriano Ruseler, Inc. Built with Docusaurus at ${utc3Time} UTC-3.`;
 
 const config: Config = {
   title: "Prof. Adriano Ruseler, Dr. Eng.",
