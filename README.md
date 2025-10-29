@@ -64,3 +64,9 @@ To upgrade Docusaurus packages with the latest version, run the following comman
 ```bash
 npm i @docusaurus/core@latest @docusaurus/preset-classic@latest @docusaurus/theme-mermaid@latest @docusaurus/module-type-aliases@latest @docusaurus/tsconfig@latest @docusaurus/types@latest
 ```
+
+## Install Chart.js and the React wrapper
+
+```bash
+npm install chart.js react-chartjs-2
+```

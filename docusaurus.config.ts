@@ -7,6 +7,19 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const formatter = new Intl.DateTimeFormat("pt-BR", {
+  timeZone: "America/Sao_Paulo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hourCycle: "h23", // Use 24-hour format
+});
+const utc3Time = formatter.format(new Date());
+const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} Adriano Ruseler, Inc. Built with Docusaurus at ${utc3Time}.`;
+
 const config: Config = {
   title: "Prof. Adriano Ruseler, Dr. Eng.",
   tagline:
@@ -67,6 +80,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
+          showLastUpdateTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/AdrianoRuseler/site/edit/main/",
           remarkPlugins: [remarkMath],
@@ -102,6 +116,8 @@ const config: Config = {
         path: "utfpr", // Path to your API docs folder
         routeBasePath: "utfpr", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarsutfpr.js"), // Separate sidebar for API docs
+        // 👇 Add this line for the last update time
+        showLastUpdateTime: true,
         // ... other options specific to your API docs
       },
     ],
@@ -379,7 +395,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Adriano Ruseler site, Inc. Built with Docusaurus.`,
+      copyright: COPYRIGHT_STRING,
     },
     prism: {
       theme: prismThemes.github,
