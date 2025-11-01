@@ -1,6 +1,5 @@
 ---
-id: tinkercad
-title: TinkerCad
+title: Description
 description: The ultimate automation scripting language for Windows.
 ---
 

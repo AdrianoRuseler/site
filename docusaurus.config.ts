@@ -137,7 +137,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Wiki",
+          label: "Docs",
         },
         {
           label: "UTFPR",
@@ -164,6 +164,70 @@ const config: Config = {
             {
               to: "/utfpr/ET76C/folder", // Link to a page in your UTFPR docs
               label: "ET76C - Eletrônica de Potência",
+            },
+          ],
+        },
+
+        {
+          label: "Cloud",
+          to: "/docs/cloud/folder", // Link to a page in your Cloud docs
+          type: "dropdown",
+          position: "left",
+          items: [
+            {
+              to: "/docs/cloud/oracle-about", // Link to a page in your Cloud docs
+              label: "Oracle OCI",
+            },
+          ],
+        },
+
+        {
+          label: "Hardware",
+          to: "/docs/hardware/folder", // Link to a page in your Cloud docs
+          type: "dropdown",
+          position: "left",
+          items: [
+            {
+              to: "/docs/hardware/hardware-about", // Link to a page in your Hardware docs
+              label: "Introduction",
+            },
+            {
+              to: "/docs/category/odroid-hc1", // Link to a page in your Hardware docs
+              label: "Odroid-HC1",
+            },
+            {
+              to: "/docs/category/er605", // Link to a page in your Hardware docs
+              label: "ER605",
+            },
+            {
+              to: "/docs/category/typhoon-hil402", // Link to a page in your Hardware docs
+              label: "Typhoon HIL402",
+            },
+          ],
+        },
+
+        {
+          label: "Simulators",
+          to: "/docs/simulators/folder", // Link to a page in your Cloud docs
+          type: "dropdown",
+          position: "left",
+          items: [
+            {
+              to: "/docs/simulators/simulators-about", // Link to a page in your Hardware docs
+              label: "Introduction",
+            },
+          ],
+        },
+
+        {
+          label: "Software",
+          to: "/docs/tools/folder", // Link to a page in your Cloud docs
+          type: "dropdown",
+          position: "left",
+          items: [
+            {
+              to: "/docs/tools/tools-about", // Link to a page in your Hardware docs
+              label: "Introduction",
             },
           ],
         },

@@ -1,6 +1,5 @@
 ---
-id: micro-cap
-title: Micro-Cap
+title: Description
 description: Electronic Circuit Analysis Program.
 ---
 

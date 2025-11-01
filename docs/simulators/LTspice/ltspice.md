@@ -1,6 +1,5 @@
 ---
-id: ltspice
-title: LTspice
+title: Description
 description: LTspice® is a powerful, fast, and free SPICE simulator software.
 ---
 
