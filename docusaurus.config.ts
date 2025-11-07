@@ -80,6 +80,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
+          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/AdrianoRuseler/site/edit/main/",
@@ -117,6 +118,7 @@ const config: Config = {
         routeBasePath: "utfpr", // Base URL for these docs (e.g., yoursite.com/api/...)
         sidebarPath: require.resolve("./sidebarsutfpr.js"), // Separate sidebar for API docs
         // 👇 Add this line for the last update time
+        showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         // ... other options specific to your API docs
       },
