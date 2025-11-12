@@ -389,6 +389,10 @@ const config: Config = {
               href: "https://ruseleredu.github.io/stm32doc/",
             },
             {
+              label: "Sistemas Digitais",
+              href: "https://ruseleredu.github.io/sd-docs/",
+            },
+            {
               label: "LabSEC",
               href: "https://ruseleredu.github.io/labsec/",
             },
