@@ -10,8 +10,8 @@ High performance extendeable web ui and RPC server for yt-dlp with low impact on
 Created for the only purpose of fetching videos from my server/nas and monitor upcoming livestreams.
 
 - https://github.com/marcopiovanello/yt-dlp-web-ui
-- https://hub.docker.com/r/marcobaobao/yt-dlp-webui
-- https://github.com/marcopiovanello/yt-dlp-web-ui/pkgs/container/yt-dlp-web-ui
+- https://github.com/AdrianoRuseler/yt-dlp-web-ui
+- https://hub.docker.com/r/ruseler/yt-dlp-webui-xbuild
 
 ## Docker images are available on Docker Hub or ghcr.io.
 
@@ -28,16 +28,64 @@ docker pull ghcr.io/marcopiovanello/yt-dlp-web-ui:latest
 
 ```yml
 services:
-  yt-dlp-webui:
-    image: marcobaobao/yt-dlp-webui:latest
+  yt-dlp-webui-xbuild:
+    image: ruseler/yt-dlp-webui-xbuild:latest
+    environment:
+      - TZ=America/Sao_Paulo
     ports:
       - 3033:3033
     volumes:
-      - ${DOWNLOADS_PATH}:/downloads # replace <your dir> with a directory on your host system
-      - ${CONFIG_PATH}:/config
+      - ./downloads:/downloads
+      - ./config.yml:/config/config.yml
     healthcheck:
       test: curl -f http://localhost:3033 || exit 1
     restart: unless-stopped
+```
+
+```yml
+# https://github.com/marcopiovanello/yt-dlp-web-ui/wiki/Authentication-methods
+require_auth: true
+username: your_username
+password: your_password
+
+# https://github.com/marcopiovanello/yt-dlp-web-ui/wiki/Twitch-integration
+twitch:
+  client_id: your-client-id
+  client_secret: your-secret
+  check_interval: 2m # follows standard go Duration format (e.g. 2m30s, 1h, 30s)
+```
+
+```apacheconf
+<VirtualHost *:80>
+    ProxyPreserveHost On
+
+    # Allow WebSocket upgrade
+    <Location />
+    #    AuthType Basic
+    #    AuthName "Restricted yt-dlp Access"
+    #    AuthUserFile /etc/apache2/.ytdlp.htpasswd
+    #    Require valid-user
+
+        ProxyPass http://yt-dlp-webui-xbuild:3033/ upgrade=websocket
+        ProxyPassReverse http://yt-dlp-webui-xbuild:3033/
+    </Location>
+
+    # WebSocket proxy for RPC
+    RewriteEngine On
+    RewriteCond %{HTTP:Upgrade} =websocket [NC]
+    RewriteRule /(.*)           ws://yt-dlp-webui-xbuild:3033/$1 [P,L]
+    RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+    RewriteRule /(.*)           http://yt-dlp-webui-xbuild:3033/$1 [P,L]
+
+    # WebSocket support headers
+    ProxyTimeout 3600
+    ProxyBadHeader Ignore
+
+    # Forward headers
+    RequestHeader set X-Forwarded-Proto "http"
+    RequestHeader set X-Forwarded-Port "80"
+
+</VirtualHost>
 ```
 
 ```bash
@@ -47,10 +95,3 @@ docker exec -it yt-dlp /bin/sh
 ```bash
 pip install -U --pre yt-dlp[default]
 ```
-
-yt-dlp Web UI
-
-CONFIG_PATH=/srv/dev-disk-by-uuid-d33ceb8d-d0bc-41f9-aa02-ecf05a6952a1/dockerfiles/yt-dlp-webui
-DOWNLOADS_PATH=/srv/dev-disk-by-uuid-d33ceb8d-d0bc-41f9-aa02-ecf05a6952a1/Downloads
-
-no matching manifest for linux/arm/v7 in the manifest list entries
