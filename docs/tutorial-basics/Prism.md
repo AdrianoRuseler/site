@@ -29,26 +29,189 @@ Docusaurus includes a small set of very common languages by default to keep the 
 - `js`, `javascript`
 - `jsx`
 - `tsx`
-- `csharp`, `cs`
 - `bash`, `shell`
 - `json`
 - `markdown`, `md`
 - `python`, `py`
-- `java`
 - `sql`
 
 ### Core Default Code Samples
 
+- `clike` (C-like)
+
+```clike
+#include <stdio.h>
+
+int main() {
+  printf("Hello World!");
+  return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+  printf("Hello World!");
+  return 0;
+}
+```
+
 - `js`, `javascript`
+- https://www.w3schools.com/js/js_examples.asp
 
 ```js
-document.getElementById("demo").innerHTML = "Hello JavaScript";
+// Declaring variables
+let name = "Alice"; // String
+const age = 30; // Number
+let isStudent = true; // Boolean
+let hobbies = ["reading", "hiking"]; // Array
+let person = { firstName: "John", lastName: "Doe" }; // Object
+
+console.log(name);
+console.log(age);
+console.log(hobbies[0]); // Accessing array elements
+console.log(person.firstName); // Accessing object properties
+```
+
+- `tsx`
+- https://www.w3schools.com/typescript/
+
+```tsx
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output1 = identity<string>("myString");
+let output2 = identity<number>(123);
+
+console.log(output1);
+console.log(output2);
+```
+
+- `java`
+- https://www.w3schools.com/java/java_examples.asp
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    /* The code below will print the words Hello World
+    to the screen, and it is amazing */
+    System.out.println("Hello World");
+  }
+}
 ```
 
 - `python`, `py`
+- https://www.w3schools.com/python/python_examples.asp
 
 ```py
-print("Hello, World!")
+def factorial(n):
+    """
+    Calculates the factorial of a non-negative integer.
+    """
+    if n == 0:
+        return 1
+    else:
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
+        return result
+
+# Example usage:
+number = 5
+print(f"The factorial of {number} is: {factorial(number)}")
+```
+
+- `sql`
+- https://www.w3schools.com/sql/sql_examples.asp
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Department VARCHAR(50),
+    HireDate DATE
+);
+```
+
+- `json`
+
+```json
+{
+  "name": "John Doe",
+  "age": 30,
+  "isStudent": false,
+  "hobbies": ["reading", "hiking", "gaming"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "zip": "12345"
+  }
+}
+```
+
+- `xml`
+- https://www.w3schools.com/xml/default.asp
+
+```xml
+ <?xml version="1.0" encoding="UTF-8"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+```
+
+- `yml` or `yaml`
+
+```yml
+---
+# This is a sample YAML file
+# It demonstrates key-value pairs, lists, and nested structures.
+
+# Simple key-value pairs
+name: Jane Doe
+age: 30
+is_student: false
+gpa: 3.85
+
+# A list of items
+hobbies:
+  - Reading
+  - Hiking
+  - Cooking
+  - Photography
+
+# A nested structure (mapping within a mapping)
+address:
+  street: 123 Main St
+  city: Anytown
+  state: CA
+  zip_code: "90210" # String value for zip code
+
+# Another list with nested mappings
+courses:
+  - title: Introduction to Programming
+    instructor: Dr. Smith
+    credits: 3
+  - title: Data Structures
+    instructor: Prof. Johnson
+    credits: 4
+
+# Multi-line string using literal style (preserves newlines)
+description: |
+  This is a multi-line
+  description of the
+  sample data.
+
+# Multi-line string using folded style (folds newlines into spaces)
+summary: >
+  This is a summary that
+  will appear as a single line
+  when parsed.
 ```
 
 ## All Prism.js Supported Languages
