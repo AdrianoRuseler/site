@@ -234,7 +234,7 @@ const config: Config = {
           ],
         },
 
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "Blog", position: "right" },
         {
           href: "https://github.com/AdrianoRuseler/site",
           label: "GitHub",
