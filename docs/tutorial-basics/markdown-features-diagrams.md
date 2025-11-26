@@ -48,6 +48,7 @@ graph TD;
     C-->D;
 ```
 
+````md
 ```mermaid
    stateDiagram-v2
     state fork_state <<fork>>
@@ -60,6 +61,60 @@ graph TD;
       State3 --> join_state
       join_state --> State4
       State4 --> [*]
+```
+````
+
+```mermaid
+   stateDiagram-v2
+    state fork_state <<fork>>
+      [*] --> fork_state
+      fork_state --> State2
+      fork_state --> State3
+
+      state join_state <<join>>
+      State2 --> join_state
+      State3 --> join_state
+      join_state --> State4
+      State4 --> [*]
+```
+
+````md
+```mermaid
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
+flowchart LR
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Continue]
+  B -->|No| D[Stop]
+```
+````
+
+```mermaid
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
+flowchart LR
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Continue]
+  B -->|No| D[Stop]
+```
+
+```mermaid
+---
+config:
+  layout: elk
+  look: handDrawn
+  theme: neutral
+---
+flowchart TB
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Continue]
+  B -->|No| D[Stop]
 ```
 
 See the [Mermaid syntax documentation](https://mermaid-js.github.io/mermaid/#/./n00b-syntaxReference) for more information on the Mermaid syntax.
