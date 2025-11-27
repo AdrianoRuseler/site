@@ -3,9 +3,12 @@ title: Kroki
 description: Kroki provides a unified API for all the diagram libraries.
 ---
 
+## Self hosted docker
+
 docker-compose.yml
 
 ```yml
+name: kroki-api
 services:
   kroki:
     image: yuzutech/kroki
@@ -34,6 +37,84 @@ services:
     image: yuzutech/kroki-excalidraw
     expose:
       - "8004"
+```
+
+## CLI
+
+- https://github.com/yuzutech/kroki-cli
+
+### Configuration
+
+To configure the endpoint, you can use a configuration file.
+The CLI will look for the following locations:
+
+- `/etc/kroki.yml`
+- `$HOME/kroki.yml`
+- `kroki.yml` same location as `hello.dot`
+
+You can also specify an alternate config file using the `--config` flag:
+
+```bash
+kroki convert hello.dot --config config.yml
+```
+
+The config file should contain the endpoint URL and the HTTP timeout.
+By default, Kroki will use the demonstration server: https://demo.kroki.io and a timeout of 20 seconds.
+
+:::caution
+Please note that the demonstration server usage is restricted to reasonable, non-commercial use-cases.
+We provide no guarantee regarding uptime or latency.
+:::
+
+Example:
+
+kroki.yml
+
+```yml
+endpoint: "http://localhost:8000"
+timeout: 30s
+```
+
+If you don't want to use a file you can also use the following environment variables:
+
+- `KROKI_ENDPOINT`
+- `KROKI_TIMEOUT`
+
+Set the Environment Variables
+
+```bash
+set KROKI_ENDPOINT=http://localhost:8000
+set KROKI_TIMEOUT=15s
+```
+
+Execute the Command
+
+```bash
+kroki convert hello.dot
+```
+
+```bash
+kroki convert hello.dot -o out.png
+```
+
+```bash
+curl -X POST -H "Content-Type: text/plain" --data-binary "@hello.dot" http://localhost:8000/graphviz/svg
+```
+
+```bash
+# Saves the output to diagram.svg
+curl -X POST -H "Content-Type: text/plain" --data-binary "@hello.dot" http://localhost:8000/graphviz/svg > diagram.svg
+```
+
+- https://di-mgt.com.au/base64-for-windows.html
+
+```bash
+# Saves the output to diagram.svg
+curl -X POST -H "Content-Type: text/plain" --data-binary "@hello.dot" http://localhost:8000/graphviz/svg > diagram.svg
+```
+
+```bash
+curl -X POST -H "Content-Type: text/plain" --data-binary "@hello.dot" http://localhost:8000/graphviz/svg | base64 > diagram_base64.txt
 ```
 
 ## Integrating Kroki with Docusaurus
