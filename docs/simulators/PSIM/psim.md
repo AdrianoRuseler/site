@@ -7,3 +7,4 @@ PSIM is an Electronic circuit simulation software package, designed specifically
 
 - https://altair.com/psim
 - https://x.com/TeAMSolidSQUAD
+- https://press.siemens.com/global/en/pressrelease/siemens-acquires-altair-create-most-complete-ai-powered-portfolio-industrial-software
