@@ -3,6 +3,10 @@ title: Kroki
 description: Kroki provides a unified API for all the diagram libraries.
 ---
 
+## MATLAB integration
+
+- https://github.com/AdrianoRuseler/kroki-matlab
+
 ## Self hosted docker
 
 docker-compose.yml
@@ -99,6 +103,18 @@ kroki convert hello.dot -o out.png
 
 ```bash
 curl -X POST -H "Content-Type: text/plain" --data-binary "@hello.dot" http://localhost:8000/graphviz/svg
+```
+
+```bash
+curl -X POST -H "Content-Type: text/plain" --data-binary "@directional-angles.tex" http://localhost:8000/tikz/svg > teste.svg
+```
+
+```bash
+curl -X POST -H "Content-Type: text/plain" --data-binary "@directional-angles.tex" https://kroki.io/tikz/svg > teste2.svg
+```
+
+```bash
+curl -X POST -H "Content-Type: text/plain" --data-binary "@directional-angles.tex" https://demo.kroki.io/tikz/svg > teste3.svg
 ```
 
 ```bash
