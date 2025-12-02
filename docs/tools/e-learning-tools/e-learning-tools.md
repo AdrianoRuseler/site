@@ -157,11 +157,13 @@ slug: /tools/e-learning-tools/intro
 - [Little Visuals](https://littlevisuals.co/)
 - [picjumbo](https://picjumbo.com/)
 - [avataaars generator](https://getavataaars.com/)
+- [DiceBear](https://www.dicebear.com/)
 - [CleanPNG](https://www.cleanpng.com/)
 - [Blush](https://blush.design/pt)
 - [flaticon](https://www.flaticon.com/)
 - [lordicon](https://lordicon.com/)
 - [SVG Logos](https://svglogos.dev/)
+- [SVG Favicon Generator](https://favicon-generator.s2n.tech/)
 
 ## Web Builders
 
@@ -225,6 +227,11 @@ slug: /tools/e-learning-tools/intro
 - [jupyter](https://jupyter.org/)
 - [SciPy](https://scipy.org/)
 - [pyLoad](https://pyload.net/)
+- [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/#)
+- [MechanicalSoup](https://mechanicalsoup.readthedocs.io/en/stable/)
+- [stm32pio](https://pypi.org/project/stm32pio/)
+- [FastAPI framework](https://fastapi.tiangolo.com/)
+- [Scrapy](https://www.scrapy.org/)
 
 ## Code editing - IDE
 
@@ -239,6 +246,7 @@ slug: /tools/e-learning-tools/intro
 ## Download utility
 
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [yt-dlp Web UI](https://github.com/marcopiovanello/yt-dlp-web-ui)
 - [youtube-dl](https://ytdl-org.github.io/youtube-dl/)
 - [JDownloader](https://beta.jdownloader.org/)
 - [DownThemAll](https://www.downthemall.org/)
@@ -279,6 +287,7 @@ slug: /tools/e-learning-tools/intro
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [Bitnami](https://github.com/bitnami/containers)
+- [Awesome Docker Compose](https://awesome-docker-compose.com/)
 - [XAMPP](https://www.apachefriends.org/)
 - [VirtualBox](https://www.virtualbox.org/)
 - [XCP-ng](https://xcp-ng.org/)
