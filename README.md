@@ -65,6 +65,12 @@ To upgrade Docusaurus packages with the latest version, run the following comman
 npm i @docusaurus/core@latest @docusaurus/preset-classic@latest @docusaurus/theme-mermaid@latest @docusaurus/module-type-aliases@latest @docusaurus/tsconfig@latest @docusaurus/types@latest
 ```
 
+To ensure accurate Baseline data, please update:
+
+```bash
+npm i baseline-browser-mapping@latest -D
+```
+
 ## Install Chart.js and the React wrapper
 
 ```bash
