@@ -431,7 +431,7 @@ const config: Config = {
             },
             {
               label: "haxNode",
-              href: "http://haxnode.net/",
+              href: "https://haxnode.net",
             },
           ],
         },
