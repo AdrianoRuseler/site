@@ -171,14 +171,18 @@ const config: Config = {
         },
 
         {
-          label: "Cloud",
-          to: "/docs/cloud/folder", // Link to a page in your Cloud docs
+          label: "Server",
+          to: "/docs/server/folder", // Link to a page in your Server docs
           type: "dropdown",
           position: "left",
           items: [
             {
-              to: "/docs/cloud/oracle-about", // Link to a page in your Cloud docs
+              to: "/docs/server/oracle-about",
               label: "Oracle OCI",
+            },
+            {
+              to: "/docs/category/xcp-ng",
+              label: "XCP-ng",
             },
           ],
         },
