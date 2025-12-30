@@ -189,25 +189,29 @@ const config: Config = {
 
         {
           label: "Hardware",
-          to: "/docs/hardware/folder", // Link to a page in your Cloud docs
+          to: "/docs/hardware/folder",
           type: "dropdown",
           position: "left",
           items: [
             {
-              to: "/docs/hardware/hardware-about", // Link to a page in your Hardware docs
+              to: "/docs/hardware/hardware-about",
               label: "Introduction",
             },
             {
-              to: "/docs/category/odroid-hc1", // Link to a page in your Hardware docs
+              to: "/docs/category/odroid-hc1",
               label: "Odroid-HC1",
             },
             {
-              to: "/docs/category/er605", // Link to a page in your Hardware docs
+              to: "/docs/category/er605",
               label: "ER605",
             },
             {
-              to: "/docs/category/typhoon-hil402", // Link to a page in your Hardware docs
+              to: "/docs/category/typhoon-hil402",
               label: "Typhoon HIL402",
+            },
+            {
+              to: "/docs/category/blackview-mp60",
+              label: "Blackview MP60",
             },
           ],
         },
