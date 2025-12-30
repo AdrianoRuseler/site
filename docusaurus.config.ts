@@ -215,8 +215,28 @@ const config: Config = {
           position: "left",
           items: [
             {
-              to: "/docs/simulators/simulators-about", // Link to a page in your Hardware docs
+              to: "/docs/simulators/simulators-about",
               label: "Introduction",
+            },
+            {
+              to: "/docs/category/ltspice",
+              label: "LTspice",
+            },
+            {
+              to: "/docs/category/psim",
+              label: "PSIM",
+            },
+            {
+              to: "/docs/category/tinkercad",
+              label: "TinkerCad",
+            },
+            {
+              to: "/docs/category/smath",
+              label: "SMath",
+            },
+            {
+              to: "/docs/category/micro-cap",
+              label: "Micro-Cap",
             },
           ],
         },
