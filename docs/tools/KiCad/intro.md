@@ -1,6 +1,6 @@
 ---
-id: kicad
-title: KiCad
+id: intro
+title: Intro
 description: A Cross Platform and Open Source Electronics Design Automation Suite.
 ---
 

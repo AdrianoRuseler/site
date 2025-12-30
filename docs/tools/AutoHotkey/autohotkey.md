@@ -1,14 +1,15 @@
 ---
-id: autohotkey
-title: AutoHotkey
+id: intro
+title: Intro
 description: The ultimate automation scripting language for Windows.
+slug: /tools/autohotkey/intro
 ---
 
 - https://www.autohotkey.com/
 
 ## YouTube Videos
 
-## Como instalar, configurar e utilizar o AutoHotKey v2
+## Como instalar, configurar e utilizar o AutoHotkey v2
 
 - https://www.autohotkey.com/
 - https://notepad-plus-plus.org/
@@ -17,7 +18,7 @@ description: The ultimate automation scripting language for Windows.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KyBrhMY4A8s?si=vwvuceL6wK9hy26m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Como instalar, configurar e utilizar o AutoHotKey
+### Como instalar, configurar e utilizar o AutoHotkey
 
 Windows Registry Editor: HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command
 

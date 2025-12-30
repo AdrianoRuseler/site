@@ -248,8 +248,40 @@ const config: Config = {
           position: "left",
           items: [
             {
-              to: "/docs/tools/tools-about", // Link to a page in your Hardware docs
+              to: "/docs/tools/tools-about",
               label: "Introduction",
+            },
+            {
+              to: "/docs/tools/e-learning",
+              label: "E-Learning",
+            },
+            {
+              to: "/docs/tools/ffmpeg",
+              label: "FFmpeg",
+            },
+            {
+              to: "/docs/tools/mixed-in-key",
+              label: "Mixed In Key",
+            },
+            {
+              to: "/docs/tools/playwright",
+              label: "Playwright",
+            },
+            {
+              to: "/docs/tools/yt-dlp",
+              label: "yt-dlp",
+            },
+            {
+              to: "/docs/tools/docker",
+              label: "Docker",
+            },
+            {
+              to: "/docs/tools/autohotkey",
+              label: "AutoHotkey",
+            },
+            {
+              to: "/docs/tools/kicad",
+              label: "KiCad",
             },
           ],
         },
