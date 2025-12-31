@@ -184,6 +184,10 @@ const config: Config = {
               to: "/docs/category/xcp-ng",
               label: "XCP-ng",
             },
+            {
+              to: "/docs/category/xen-orchestra",
+              label: "Xen Orchestra",
+            },
           ],
         },
 
@@ -463,10 +467,6 @@ const config: Config = {
             {
               label: "My Docs",
               href: "https://adrianoruseler.github.io/my-docs/",
-            },
-            {
-              label: "My DocPage",
-              href: "https://ruseleredu.github.io/my-docpage/",
             },
           ],
         },
