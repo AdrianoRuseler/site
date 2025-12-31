@@ -8,3 +8,5 @@ description: XCP-ng is a Linux distribution of the Xen Project, with pre-configu
 XCP-ng is a Linux distribution of the Xen Project, with pre-configured Xen Hypervisor and the Xen API project working out-of-the-box.
 
 - https://xcp-ng.org/
+- https://docs.xcp-ng.org/
+- https://github.com/xcp-ng/xcp-ng-org
