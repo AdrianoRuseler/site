@@ -214,6 +214,32 @@ summary: >
   when parsed.
 ```
 
+- `tex`, `latex` and `context`
+
+  LaTeX —latex, tex, context
+
+```tex
+\documentclass[border=1mm]{standalone}
+\usepackage{tikz-timing}
+\tikzset{timing/name/.style={font=\sffamily\scriptsize}}
+\begin{document}
+\begin{tikztimingtable}[timing/slope=0,timing/xunit=15,timing/yunit=15]
+	A & 2{8C}; \\
+	B & 4{4C}; \\
+	C & 8{2C}; \\
+	D & 16{C}; \\
+	Y & HXLHXHXHXLHHHXXH \\
+	\extracode
+	\begin{scope}[on background layer]
+		\vertlines[help lines, dashed]{}
+		\horlines[help lines]{}
+		\foreach [count=\x] \b in {0,1,...,15} {
+				\node [below,font=\sffamily\bfseries\tiny,inner ysep=2pt] at (\x-.5,-8) {\b};}
+	\end{scope}
+\end{tikztimingtable}
+\end{document}
+```
+
 ## All Prism.js Supported Languages
 
 Prism.js itself supports a massive number of languages, far more than Docusaurus includes by default. To use any of these, you must explicitly add them to your `docusaurus.config.js` file.

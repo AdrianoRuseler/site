@@ -539,6 +539,7 @@ const config: Config = {
         "matlab",
         "powershell",
         "ini",
+        "latex",
       ],
     },
   } satisfies Preset.ThemeConfig,
