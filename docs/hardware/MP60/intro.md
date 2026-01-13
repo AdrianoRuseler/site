@@ -9,6 +9,10 @@ Blackview MP60 Mini PC N150
 - https://store.blackview.hk/en-us/products/mp60-mini-pc
 - https://manuals.plus/asin/B0FL28L24Y
 
+## GitHub
+
+- https://github.com/AdrianoRuseler/mp60
+
 ## MP60 Ubuntu Install
 
 - https://store.blackview.hk/products/mp60-mini-pc
