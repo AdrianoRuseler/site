@@ -5,8 +5,8 @@ title: Calendário Acadêmico
 description: Sobre minhas disciplinas
 ---
 
-## [UTFPR-CT 2025](/pdf/UTFPR-CTAcademicCalendar2025.pdf)
+## Calendário Acadêmico de 2026
 
-## UTFPR-CT 2026
+[Calendário Acadêmico de 2026](/pdf/CT2026.pdf)
 
-![2026](/img/CalendarioCuritiba2026.png)
+![Calendário Acadêmico de 2026](/img/CT2026.png)
