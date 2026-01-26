@@ -5,6 +5,8 @@ description: Informações gerais sobre a disciplina ELT74E.
 slug: /ELT74E/intro
 ---
 
+## Amplificadores Operacionais e Semicondutores
+
 ---
 
 | Unidade Curricular:                         | Amplificadores Operacionais e Semicondutores                                                                                                                                                                                                                                                                                                                                                                                                                                 |

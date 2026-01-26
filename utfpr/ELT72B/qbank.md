@@ -6,7 +6,7 @@ description: Banco de questões da disciplina ELT72B.
 slug: /ELT72B/qbank
 ---
 
-## Sistemas Digitais
+## Eletrônica Analógica
 
 ### Banco de questões
 
