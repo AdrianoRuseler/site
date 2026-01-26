@@ -7,3 +7,6 @@ slug: /ELT73A/qbank
 ---
 
 ## Banco de questões
+
+- https://github.com/AdrianoRuseler/MIC-QUIZ
+- https://github.com/AdrianoRuseler/quiz2matlab
