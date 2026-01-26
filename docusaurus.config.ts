@@ -297,7 +297,12 @@ const config: Config = {
             },
           ],
         },
-
+        {
+          to: "/pdf/CT2026.pdf",
+          label: "Calendário",
+          position: "right",
+          target: "_blank",
+        },
         { to: "/blog", label: "Blog", position: "right" },
         {
           href: "https://github.com/AdrianoRuseler/site",
