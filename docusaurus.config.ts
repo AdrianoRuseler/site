@@ -462,6 +462,10 @@ const config: Config = {
               href: "https://ruseleredu.github.io/sd-docs/",
             },
             {
+              label: "Analógica",
+              href: "https://ruseleredu.github.io/ea-docs/",
+            },
+            {
               label: "LabSEC",
               href: "https://ruseleredu.github.io/labsec/",
             },
