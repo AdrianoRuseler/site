@@ -28,3 +28,8 @@
   --ifm-color-primary-lightest: #fdfeff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Removes the external link icon specifically in the footer */
+.footer__link-item svg {
+  display: none;
+}
