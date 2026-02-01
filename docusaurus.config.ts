@@ -480,6 +480,43 @@ const config: Config = {
           ],
         },
         {
+          title: "AI", //
+          items: [
+            {
+              label: "Gemini",
+              href: "https://gemini.google.com/app",
+            }, //
+            {
+              label: "ChatGPT",
+              href: "https://chatgpt.com/",
+            }, //
+            {
+              label: "Claude",
+              href: "https://claude.ai/",
+            },
+            {
+              label: "Copilot",
+              href: "https://copilot.microsoft.com/",
+            },
+            {
+              label: "DeepSeek",
+              href: "https://chat.deepseek.com/",
+            },
+            {
+              label: "Grok",
+              href: "https://grok.com/",
+            },
+            {
+              label: "Kimi",
+              href: "https://www.kimi.com/en",
+            },
+            {
+              label: "GLM",
+              href: "https://chat.z.ai/",
+            },
+          ],
+        },
+        {
           title: "Downloads",
           items: [
             {
