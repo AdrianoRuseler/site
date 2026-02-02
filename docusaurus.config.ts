@@ -388,6 +388,10 @@ const config: Config = {
               href: "https://sougov.sigepe.gov.br/sougov/Home",
             },
             {
+              label: "gov.br",
+              href: "https://servicos.acesso.gov.br/",
+            },
+            {
               label: "Consulta Diários",
               href: "https://sistemas2.utfpr.edu.br/url/1141",
             },
