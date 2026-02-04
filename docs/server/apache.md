@@ -5,6 +5,8 @@ title: Apache
 description: Apache related documentation
 ---
 
+## Apache
+
 [Apache](https://www.apache.org/)
 
 ```bash
@@ -62,4 +64,32 @@ sudo netfilter-persistent save
 
 ```bash
 sudo iptables -L -n -v
+```
+
+## Certbot
+
+- https://certbot.eff.org/
+
+### Apache on Linux (snap)
+
+- https://certbot.eff.org/instructions?ws=apache&os=snap
+
+```bash
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/local/bin/certbot
+sudo certbot --apache
+```
+
+### Apache on Linux (pip)
+
+- https://certbot.eff.org/instructions?ws=apache&os=pip
+
+```bash
+sudo apt update
+sudo apt install python3 python3-dev python3-venv libaugeas-dev gcc
+sudo python3 -m venv /opt/certbot/
+sudo /opt/certbot/bin/pip install --upgrade pip
+sudo /opt/certbot/bin/pip install certbot certbot-apache
+sudo ln -s /opt/certbot/bin/certbot /usr/local/bin/certbot
+sudo certbot --apache
 ```
