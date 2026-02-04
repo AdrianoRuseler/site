@@ -19,6 +19,12 @@ sudo apt install openjdk-21-jdk -y
 java -version
 ```
 
+Managing Multiple Versions
+
+```bash
+sudo update-alternatives --config java
+```
+
 ### Create a Dedicated Jenkins User
 
 It is safer to run builds under a non-root user.
@@ -75,6 +81,10 @@ cat ~/jenkins_agent_key
 ssh -i ~/jenkins_agent_key jenkins@mdldocker.adrianoruseler.com
 
 ssh -i ~/jenkins_agent_key jenkins@iot.adrianoruseler.com
+
+ssh -i ~/jenkins_agent_key jenkins@moodleconf.ct.utfpr.edu.br
+
+ssh -i ~/jenkins_agent_key jenkins@nupet.daelt.ct.utfpr.edu.br
 ```
 
 ## Configuration Reference
