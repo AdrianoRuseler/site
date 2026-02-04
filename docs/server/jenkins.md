@@ -46,6 +46,18 @@ ls -ld /home/jenkins/agent
 sudo chsh -s /bin/bash jenkins
 ```
 
+The "No Password" Way (Most Common for Jenkins)
+
+```bash
+sudo visudo
+```
+
+Add this line to the very bottom of the file:
+
+```txt
+jenkins ALL=(ALL) NOPASSWD: ALL
+```
+
 ### Set Up SSH Access
 
 You need to allow your local Jenkins controller to log into the remote agent without a password.
