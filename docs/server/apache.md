@@ -47,3 +47,19 @@ sudo nano /etc/apache2/sites-available/default-ssl.conf
 nano index.html
 sudo systemctl reload apache2
 ```
+
+## Opening ports 80 (HTTP) and 443 (HTTPS)
+
+- The Commands
+
+```bash
+sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+sudo netfilter-persistent save
+```
+
+- Verify the Rules
+
+```bash
+sudo iptables -L -n -v
+```
