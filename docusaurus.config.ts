@@ -378,6 +378,10 @@ const config: Config = {
               label: "TCC",
               href: "https://nupet.daelt.ct.utfpr.edu.br/tcc/engenharia/index.html",
             },
+            {
+              label: "Nuvem",
+              href: "https://nuvem.utfpr.edu.br/",
+            },
           ],
         },
         {
