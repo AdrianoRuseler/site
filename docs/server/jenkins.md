@@ -84,6 +84,7 @@ ssh-keygen -t ed25519 -f ~/jenkins_agent_key
 cat ~/jenkins_agent_key.pub
 sudo nano /home/jenkins/.ssh/authorized_keys
 
+
 # 3. View the PRIVATE key (you will copy-paste this into Jenkins UI)
 cat ~/jenkins_agent_key
 ```
@@ -97,6 +98,50 @@ ssh -i ~/jenkins_agent_key jenkins@iot.adrianoruseler.com
 ssh -i ~/jenkins_agent_key jenkins@moodleconf.ct.utfpr.edu.br
 
 ssh -i ~/jenkins_agent_key jenkins@nupet.daelt.ct.utfpr.edu.br
+
+ssh -i ~/jenkins_agent_key jenkins@mini.pc
+
+ssh -i ~/jenkins_agent_key jenkins@docker.adrianoruseler.com
+
+ssh -i ~/jenkins_agent_key jenkins@mysql.adrianoruseler.com
+```
+
+## Remove jenkins user
+
+- Stop Jenkins Processes
+
+```bash
+# Kill any processes owned by the 'jenkins' user
+sudo pkill -u jenkins
+```
+
+- Delete the User
+
+```bash
+# Remove the user and their home directory (/home/jenkins)
+sudo deluser --remove-home jenkins
+```
+
+- Re-creating the User (The "Clean" Way)
+
+```bash
+# 1. Create the user with a standard home and bash shell
+sudo adduser jenkins --shell /bin/bash
+
+# 2. Create the agent workspace
+sudo mkdir -p /home/jenkins/agent
+sudo chown -R jenkins:jenkins /home/jenkins/agent
+
+# 3. Add your SSH key manually now while logged in as root
+sudo mkdir -p /home/jenkins/.ssh
+# Replace the string below with your actual public key
+echo "ssh-ed25519 ..." | sudo tee /home/jenkins/.ssh/authorized_keys
+sudo chown -R jenkins:jenkins /home/jenkins/.ssh
+sudo chmod 700 /home/jenkins/.ssh
+sudo chmod 600 /home/jenkins/.ssh/authorized_keys
+
+# Add the Jenkins user to the Docker group (Recommended)
+sudo usermod -aG docker jenkins
 ```
 
 ## Configuration Reference
@@ -109,6 +154,27 @@ When you go back to the Jenkins UI to add the node, use these paths based on the
 
 Credentials: Select the SSH Private Key you generated in Step 2.
 
-## Reference
+## Host Key Verification Strategy
 
-- https://gemini.google.com/share/5e66c0e53adf
+Controls how Jenkins verifies the SSH key presented by the remote host whilst connecting.
+
+- Inside the Running Container (Direct)
+
+If you don't want to hunt for volume paths, you can inject the key directly into the running container:
+
+```bash
+# 1. Enter the container as the jenkins user
+docker exec -u jenkins -it <container_id_or_name> bash
+
+# 2. Create the directory and the file
+mkdir -p ~/.ssh
+ssh-keyscan mysql.adrianoruseler.com >> ~/.ssh/known_hosts
+ssh-keyscan moodleconf.ct.utfpr.edu.br >> ~/.ssh/known_hosts
+ssh-keyscan docker.adrianoruseler.com >> ~/.ssh/known_hosts
+ssh-keyscan iot.adrianoruseler.com >> ~/.ssh/known_hosts
+ssh-keyscan mdldocker.adrianoruseler.com >> ~/.ssh/known_hosts
+
+# 3. Secure the permissions
+chmod 700 ~/.ssh
+chmod 644 ~/.ssh/known_hosts
+```
