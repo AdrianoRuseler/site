@@ -538,7 +538,7 @@ const config: Config = {
             },
             {
               label: "Sci-Hub",
-              href: "https://sci-hub.se/",
+              href: "https://sci-hub.box/",
             },
             {
               label: "SolidSQUAD",
@@ -575,7 +575,7 @@ const config: Config = {
             },
             {
               label: "YTS",
-              href: "https://yts-official.mx/",
+              href: "https://ww3.yts-official.to/",
             },
           ],
         },
