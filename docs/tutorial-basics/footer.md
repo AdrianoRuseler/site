@@ -3,7 +3,7 @@ title: Footer and Navbar
 description: Separate Docusaurus Footer and NavBar Configuration
 ---
 
-## Separate Docusaurus Footer Configuration
+## Footer Configuration
 
 - Create `footer.ts` file at the same level as `docusaurus.config.ts`
 
@@ -24,6 +24,7 @@ const utc3Time = formatter.format(new Date());
 const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} My Site, Inc. Built with <a href="https://docusaurus.io/" style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer">Docusaurus</a> at ${utc3Time} UTC-3.`;
 
 const footer: ThemeConfig["footer"] = {
+  // highlight-start
   style: "dark",
   links: [
     {
@@ -32,6 +33,7 @@ const footer: ThemeConfig["footer"] = {
     },
     // ... rest of your links
   ],
+  // highlight-end
   copyright: COPYRIGHT_STRING,
 };
 
@@ -42,6 +44,7 @@ export default footer;
 
 ```ts
 import { Config } from "@docusaurus/types";
+// highlight-next-line
 import footer from "./footer"; // No need for .ts extension here
 
 const config: Config = {
@@ -49,6 +52,7 @@ const config: Config = {
   // ... other config
 
   themeConfig: {
+    // highlight-next-line
     footer: footer, // Use the imported object
     // ... other themeConfig
   },
@@ -57,7 +61,7 @@ const config: Config = {
 export default config;
 ```
 
----
+## NavBar Configuration
 
 Create a file named navbar.ts in the same directory as your config. We will use the NavbarItem type from Docusaurus to ensure your links are structured correctly.
 
@@ -67,6 +71,7 @@ In `navbar.ts`
 import { NavbarItem } from "@docusaurus/theme-common";
 
 const navbarItems: NavbarItem[] = [
+  // highlight-start
   {
     type: "docSidebar",
     sidebarId: "tutorialSidebar",
@@ -79,6 +84,7 @@ const navbarItems: NavbarItem[] = [
     label: "GitHub",
     position: "right",
   },
+  // highlight-end
 ];
 
 export default navbarItems;
@@ -89,6 +95,7 @@ Now, import the items and assign them to the navbar.items property.
 ```ts
 import { Config } from "@docusaurus/types";
 import footer from "./footer";
+// highlight-next-line
 import navbarItems from "./navbar"; // Import your new navbar file
 
 const config: Config = {
@@ -102,6 +109,7 @@ const config: Config = {
         alt: "My Site Logo",
         src: "img/logo.svg",
       },
+      // highlight-next-line
       items: navbarItems, // Drop the imported array here
     },
     footer: footer,
