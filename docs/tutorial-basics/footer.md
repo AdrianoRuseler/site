@@ -1,6 +1,6 @@
 ---
-title: Footer
-description: Footer tips.
+title: Footer and Navbar
+description: Separate Docusaurus Footer and NavBar Configuration
 ---
 
 ## Separate Docusaurus Footer Configuration
@@ -51,6 +51,60 @@ const config: Config = {
   themeConfig: {
     footer: footer, // Use the imported object
     // ... other themeConfig
+  },
+};
+
+export default config;
+```
+
+---
+
+Create a file named navbar.ts in the same directory as your config. We will use the NavbarItem type from Docusaurus to ensure your links are structured correctly.
+
+In `navbar.ts`
+
+```ts
+import { NavbarItem } from "@docusaurus/theme-common";
+
+const navbarItems: NavbarItem[] = [
+  {
+    type: "docSidebar",
+    sidebarId: "tutorialSidebar",
+    position: "left",
+    label: "Tutorial",
+  },
+  { to: "/blog", label: "Blog", position: "left" },
+  {
+    href: "https://github.com/facebook/docusaurus",
+    label: "GitHub",
+    position: "right",
+  },
+];
+
+export default navbarItems;
+```
+
+Now, import the items and assign them to the navbar.items property.
+
+```ts
+import { Config } from "@docusaurus/types";
+import footer from "./footer";
+import navbarItems from "./navbar"; // Import your new navbar file
+
+const config: Config = {
+  title: "MySite",
+  // ... rest of your config
+
+  themeConfig: {
+    navbar: {
+      title: "My Site",
+      logo: {
+        alt: "My Site Logo",
+        src: "img/logo.svg",
+      },
+      items: navbarItems, // Drop the imported array here
+    },
+    footer: footer,
   },
 };
 
