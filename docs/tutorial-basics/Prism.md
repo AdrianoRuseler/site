@@ -1,5 +1,5 @@
 ---
-title: Prism (Code Block)
+title: </> Prism (Code Block)
 description: Lightweight, robust, elegant syntax highlighting.
 ---
 
