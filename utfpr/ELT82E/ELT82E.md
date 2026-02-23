@@ -8,6 +8,8 @@ slug: /ELT82E/intro
 
 ## Eletrônica Analógica
 
+- https://ruseleredu.github.io/ea-docs/
+
 ### Objetivo
 
 Polarizar componentes ativos para atuar na região de corte, saturação e linear; Ensaiar circuitos eletrônicos contendo componentes ativos e passivos;
