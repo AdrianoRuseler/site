@@ -168,6 +168,10 @@ const footer: ThemeConfig["footer"] = {
           href: "https://adrianoruseler.github.io/site/",
         },
         {
+          label: "HIL Docs",
+          href: "https://ruseleredu.github.io/hil-docs/",
+        },
+        {
           label: "STM32 Docs",
           href: "https://ruseleredu.github.io/stm32doc/",
         },
