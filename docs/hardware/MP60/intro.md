@@ -13,6 +13,10 @@ Blackview MP60 Mini PC N150
 
 - https://github.com/AdrianoRuseler/mp60
 
+## ngrok
+
+- https://fox-liked-halibut.ngrok-free.app
+
 ## MP60 Ubuntu Install
 
 - https://store.blackview.hk/products/mp60-mini-pc
