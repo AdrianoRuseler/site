@@ -129,6 +129,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
+        // https://prismjs.com/#supported-languages
         "autohotkey",
         "arduino",
         "apacheconf",
@@ -138,6 +139,7 @@ const config: Config = {
         "powershell",
         "ini",
         "latex",
+        "php",
       ],
     },
   } satisfies Preset.ThemeConfig,

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-title: Docu YouTube videos
+sidebar_position: 2
+title: 🎬 Docu YouTube videos
 description: Lista de videos sobre docusaurus.
 ---
 

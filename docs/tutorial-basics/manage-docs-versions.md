@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 ---
 
 # Manage Docs Versions
@@ -34,7 +33,7 @@ export default {
       items: [
         // highlight-start
         {
-          type: 'docsVersionDropdown',
+          type: "docsVersionDropdown",
         },
         // highlight-end
       ],
