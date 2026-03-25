@@ -63,6 +63,22 @@ RewriteEngine On
 RewriteRule ^index\.php$ https://adrianoruseler.github.io/site/ [R=301,L]
 ```
 
+- Change the "AllowOverride" Directive
+
+```apacheconf
+<Directory /var/www/html/site>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+
+For the changes to take effect, you must restart the service:
+
+```bash
+systemctl restart apache2
+```
+
 ## Which one should you use?
 
 Here is a quick breakdown to help you decide:
