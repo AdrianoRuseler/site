@@ -1,6 +1,6 @@
 ---
 id: multiple-docs
-title: 📟 Create Multiple Docs Instances
+title: 📚 Create Multiple Docs Instances
 slug: /multiple-docs
 ---
 
@@ -115,7 +115,6 @@ This is the most flexible and recommended approach when you want clearly separat
 
 3.  **Create separate sidebar files:**
     For each new docs instance, you'll typically want a separate sidebar file.
-
     - `sidebars.js` (for `docs` folder)
     - `sidebarsApi.js` (for `api-docs` folder)
     - `sidebarsDev.js` (for `dev-docs` folder)
@@ -279,13 +278,11 @@ This approach is suitable if you want to organize your documentation within a si
 ### When to choose which approach:
 
 - **Multiple `@docusaurus/plugin-content-docs` instances (Approach 1):**
-
   - **Choose this when:** You want completely separate documentation sets with independent URLs, sidebars, and potentially different configurations (e.g., "User Guide" vs. "API Reference" vs. "Blog"). This is the most common and recommended approach for distinct documentation types.
   - **Pros:** Clear separation, independent routing, separate sidebars, flexible configuration per docs set.
   - **Cons:** Requires more configuration in `docusaurus.config.js` and separate sidebar files.
 
 - **Subfolders within a single `docs` folder (Approach 2):**
-
   - **Choose this when:** You want to organize a single, cohesive documentation set into logical sub-sections, all sharing the same base URL and sidebar structure (though the sidebar can be structured with categories).
   - **Pros:** Simpler initial setup, unified URL structure, single sidebar file.
   - **Cons:** Less flexibility for independent configuration or entirely separate navigation.

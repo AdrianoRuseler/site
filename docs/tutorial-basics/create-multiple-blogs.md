@@ -1,6 +1,6 @@
 ---
 id: multiple-blogs
-title: Create Multiple Blogs Instances
+title: 📟 Create Multiple Blogs Instances
 slug: /multiple-blogs
 ---
 
@@ -241,7 +241,6 @@ jane_smith:
     Typically, you'd place `authors.yml` in your `blog` directory (or the specific blog directory if you have multiple, e.g., `dev-blog/authors.yml` or `news/authors.yml`). If you want to use the same `authors.yml` across multiple blogs, you can place it in a common location and reference it in each blog's configuration.
 
     A common place is at the root of your blog folder:
-
     - `blog/authors.yml`
     - `dev-blog/authors.yml`
     - `news/authors.yml`
