@@ -33,3 +33,84 @@
 .footer__link-item svg {
   display: none;
 }
+
+.emoji-table-container table {
+  display: table;
+  width: 100%;
+}
+
+.emoji-table-container td {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.emoji-table-container td:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.emoji-table-container code {
+  user-select: all;
+}
+
+.emoji-search-container input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.emoji-search-container tr {
+  transition: opacity 0.1s ease-in-out;
+}
+
+.emoji-search-container input {
+  position: sticky;
+  top: calc(
+    var(--ifm-navbar-height) + 1rem
+  ); /* Sits below the Docusaurus navbar */
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add a fade to the rows for a smoother feel */
+.emoji-table-container tr {
+  transition: opacity 0.2s ease;
+}
+
+.emoji-table-container td {
+  padding: 12px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* src/css/custom.css */
+
+/* Highlight the row being hovered over */
+.emoji-table-container tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  transition: background-color 0.1s ease-in-out;
+}
+
+/* Add a pointer cursor to the entire row to indicate it's clickable */
+.emoji-table-container tr {
+  cursor: pointer;
+}
+
+/* Make the icons slightly larger on hover */
+.emoji-table-container tr:hover img {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Style the Sticky Search Bar for better visibility */
+.emoji-search-container input {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 0.5rem);
+  z-index: 10;
+  box-shadow: var(--ifm-global-shadow-md);
+  border: 2px solid var(--ifm-color-primary-light);
+}
+
+.emoji-search-container input:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest);
+  outline: none;
+}

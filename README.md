@@ -76,3 +76,9 @@ npm i baseline-browser-mapping@latest -D
 ```bash
 npm install chart.js react-chartjs-2
 ```
+
+## Scripts
+
+```bash
+node scripts/generate-emojis.js
+```
