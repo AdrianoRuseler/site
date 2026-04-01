@@ -158,6 +158,10 @@ const footer: ThemeConfig["footer"] = {
           label: "ORCID",
           href: "https://orcid.org/0000-0003-0915-9483",
         },
+        {
+          label: "Docker Hub",
+          href: "https://hub.docker.com/u/ruseler",
+        },
       ],
     },
     {
