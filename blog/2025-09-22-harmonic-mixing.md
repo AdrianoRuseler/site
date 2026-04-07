@@ -10,7 +10,7 @@ tags: [djstudio]
 What’s the secret technique pro DJs like David Guetta, Carl Cox, and Armin van Buuren use to make their transitions sound flawless? 🎧
 It’s called Harmonic Mixing – and once you understand it, your sets will instantly sound smoother, more professional, and impossible to ignore.
 
-<!-- truncate -->
+{/* truncate */}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Xzvid-d1c9E?si=sg-WtlfJs-X8jXCT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

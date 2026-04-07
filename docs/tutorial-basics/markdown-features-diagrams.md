@@ -9,7 +9,7 @@ slug: /diagrams
 
 Diagrams can be rendered using [Mermaid](https://mermaid-js.github.io/mermaid/) in a code block.
 
-## Installation {#installation}
+## Installation
 
 ```bash npm2yarn
 npm install --save @docusaurus/theme-mermaid
@@ -26,7 +26,7 @@ export default {
 };
 ```
 
-## Usage {#usage}
+## Usage
 
 Add a code block with language `mermaid`:
 
@@ -119,7 +119,7 @@ flowchart TB
 
 See the [Mermaid syntax documentation](https://mermaid-js.github.io/mermaid/#/./n00b-syntaxReference) for more information on the Mermaid syntax.
 
-## Theming {#theming}
+## Theming
 
 The diagram dark and light themes can be changed by setting `mermaid.theme` values in the `themeConfig` in your `docusaurus.config.js`. You can set themes for both light and dark mode.
 
@@ -135,7 +135,7 @@ export default {
 
 See the [Mermaid theme documentation](https://mermaid-js.github.io/mermaid/#/theming) for more information on theming Mermaid diagrams.
 
-## Mermaid Config {#configuration}
+## Mermaid Config
 
 Options in `mermaid.options` will be passed directly to `mermaid.initialize`:
 
@@ -153,7 +153,7 @@ export default {
 
 See the [Mermaid config documentation](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration) and the [Mermaid config types](https://github.com/mermaid-js/mermaid/blob/master/packages/mermaid/src/config.type.ts) for the available config options.
 
-## Dynamic Mermaid Component {#component}
+## Dynamic Mermaid Component
 
 To generate dynamic diagrams, you can use the `Mermaid` component:
 

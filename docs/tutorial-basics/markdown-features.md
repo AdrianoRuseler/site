@@ -155,17 +155,25 @@ This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
 
 This is <Highlight color="#1877F2">Facebook blue</Highlight> !
 
-## Navbar dropdown {#navbar-dropdown}
+## Navbar dropdown
 
 Navbar items of the type `dropdown` has the additional `items` field, an inner array of navbar items.
 
 Navbar dropdown items only accept the following **"link-like" item types**:
 
-- [Navbar link](#navbar-link)
-- [Navbar doc link](#navbar-doc-link)
-- [Navbar docs version](#navbar-docs-version)
-- [Navbar doc sidebar](#navbar-doc-sidebar)
-- [Navbar with custom HTML](#navbar-with-custom-html)
+- Markdown Features
+  - [Front Matter](#front-matter)
+  - [Links](#links)
+  - [Images](#images)
+  - [Code Blocks](#code-blocks)
+  - [Admonitions](#admonitions)
+  - [MDX and React Components](#mdx-and-react-components)
+  - [Navbar dropdown](#navbar-dropdown)
+    - [Navbar link](#navbar-link)
+    - [Navbar doc link](#navbar-doc-link)
+    - [Navbar docs version](#navbar-docs-version)
+    - [Navbar linked to a sidebar](#navbar-linked-to-a-sidebar)
+    - [Navbar with custom HTML](#navbar-with-custom-html)
 
 Note that the dropdown base item is a clickable link as well, so this item can receive any of the props of a [plain navbar link](#navbar-link).
 
@@ -210,7 +218,7 @@ export default {
 };
 ```
 
-### Navbar link {#navbar-link}
+### Navbar link
 
 By default, Navbar items are regular links (internal or external).
 
@@ -265,7 +273,7 @@ export default {
 };
 ```
 
-### Navbar doc link {#navbar-doc-link}
+### Navbar doc link
 
 If you want to link to a specific doc, this special navbar item type will render the link to the doc of the provided `docId`. It will get the class `navbar__link--active` as long as you browse a doc of the same sidebar.
 
@@ -300,7 +308,7 @@ export default {
 };
 ```
 
-### Navbar docs version {#navbar-docs-version}
+### Navbar docs version
 
 If you use docs with versioning, this special navbar item type will link to the active/browsed version of your doc (depends on the current URL), and fallback to the latest version.
 
@@ -335,7 +343,7 @@ export default {
 };
 ```
 
-### Navbar linked to a sidebar {#navbar-doc-sidebar}
+### Navbar linked to a sidebar
 
 You can link a navbar item to the first document link (which can be a doc link or a generated category index) of a given sidebar without having to hardcode a doc ID.
 
@@ -396,7 +404,7 @@ export default {
 };
 ```
 
-### Navbar with custom HTML {#navbar-with-custom-html}
+### Navbar with custom HTML
 
 You can also render your own HTML markup inside a navbar item using this navbar item type.
 

@@ -8,13 +8,13 @@ slug: /math-equations
 
 Mathematical equations can be rendered using [KaTeX](https://katex.org).
 
-See [below](#configuration) how to activate them.
+See below how to activate them.
 
-## Usage {#usage}
+## Usage
 
 Please read the [KaTeX](https://katex.org) documentation for more details.
 
-### Inline {#inline}
+### Inline
 
 Write inline math equations by wrapping LaTeX equations between `$`:
 
@@ -27,7 +27,7 @@ $f$ is continuous at $x$, $F$ is differentiable at $x$ with $F'(x)=f(x)$.
 Let $f\colon[a,b] \to \R$ be Riemann integrable. Let $F\colon[a,b]\to\R$ be $F(x)=
 \int_{a}^{x} f(t)\,dt$. Then $F$ is continuous, and at all $x$ such that $f$ is continuous at $x$, $F$ is differentiable at $x$ with $F'(x)=f(x)$.
 
-### Blocks {#blocks}
+### Blocks
 
 For equation block or display mode, use line breaks and `$$`:
 
@@ -41,7 +41,7 @@ $$
 I = \int_0^{2\pi} \sin(x)\,dx
 $$
 
-## Enabling math equations {#configuration}
+## Enabling math equations
 
 Enable KaTeX:
 
@@ -185,7 +185,7 @@ export default {
 
 </details>
 
-## Self-hosting KaTeX assets {#self-hosting-katex-assets}
+## Self-hosting KaTeX assets
 
 Loading stylesheets, fonts, and JavaScript libraries from CDN sources is a good practice for popular libraries and assets, since it reduces the amount of assets you have to host. In case you prefer to self-host the `katex.min.css` (along with required KaTeX fonts), you can download the latest version from [KaTeX GitHub releases](https://github.com/KaTeX/KaTeX/releases), extract and copy `katex.min.css` and `fonts` directory (only `.woff2` font types should be enough) to your site's `static` directory, and in `docusaurus.config.js`, replace the stylesheet's `href` from the CDN URL to your local path (say, `/katex/katex.min.css`).
 

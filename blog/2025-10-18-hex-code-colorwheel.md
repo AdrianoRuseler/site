@@ -6,7 +6,7 @@ authors: adrianoruseler
 
 To generate a markdown table with the key letter and background color hex code from the provided image, I'll need to **visually inspect and estimate** the colors for each section. Since I can't interact with the image as a color picker, the hex codes will be **approximate** representations of the colors I see.
 
-<!-- truncate -->
+{/* truncate */}
 
 Here is the markdown table with the approximate background color hex codes for each key letter:
 
