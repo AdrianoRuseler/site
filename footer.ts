@@ -1,5 +1,7 @@
 import { ThemeConfig } from "@docusaurus/preset-classic";
 
+const currentYear = new Date().getFullYear();
+
 const formatter = new Intl.DateTimeFormat("pt-BR", {
   timeZone: "America/Sao_Paulo",
   year: "numeric",
@@ -8,14 +10,19 @@ const formatter = new Intl.DateTimeFormat("pt-BR", {
   hour: "2-digit",
   minute: "2-digit",
   second: "2-digit",
-  hourCycle: "h23", // Use 24-hour format
+  hourCycle: "h23",
 });
+
 const utc3Time = formatter.format(new Date());
-const doclink =
-  '<a href="https://docusaurus.io/" style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer">Docusaurus</a>';
-const gitlink =
-  '<a href="https://github.com/AdrianoRuseler/site" style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer">Adriano Ruseler</a>';
-const COPYRIGHT_STRING = `Copyright © ${new Date().getFullYear()} ${gitlink}. Built with ${doclink} at ${utc3Time} UTC-3.`;
+
+// Using consistent styling for links
+const linkStyle =
+  'style="color: #ffffff; font-weight: bold;" target="_blank" rel="noopener noreferrer"';
+const gitlink = `<a href="https://github.com/AdrianoRuseler/site" ${linkStyle}>Adriano Ruseler</a>`;
+const docusaurusVersion = require("@docusaurus/core/package.json").version;
+const doclink = `<a href="https://docusaurus.io/" ${linkStyle}>Docusaurus</a>  v${docusaurusVersion}`;
+
+const COPYRIGHT_STRING = `Copyright © ${currentYear} ${gitlink}. Built with ${doclink} at ${utc3Time} (UTC-3).`;
 
 const footer: ThemeConfig["footer"] = {
   style: "dark",
