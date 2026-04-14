@@ -200,11 +200,7 @@ const footer: ThemeConfig["footer"] = {
         },
         {
           label: "Moodle Docs",
-          href: "https://adrianoruseler.github.io/moodle-docs/",
-        },
-        {
-          label: "My Docs",
-          href: "https://adrianoruseler.github.io/my-docs/",
+          href: "https://ruseleredu.github.io/moodle-docs/",
         },
       ],
     },
@@ -259,6 +255,10 @@ const footer: ThemeConfig["footer"] = {
         {
           label: "Sci-Hub",
           href: "https://sci-hub.box/",
+        },
+        {
+          label: "Sci-Net",
+          href: "https://sci-net.xyz/",
         },
         {
           label: "SolidSQUAD",
