@@ -4,6 +4,9 @@
  * work well for content-centric websites.
  */
 
+/* Importing the KaTeX CSS file to ensure proper styling of mathematical expressions. */
+@import url("/katex/katex.min.css");
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #00466c;
