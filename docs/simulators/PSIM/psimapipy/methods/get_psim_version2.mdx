@@ -35,3 +35,34 @@ disp(char(psim.get_psim_version2()));
 ```matlab
 py.help(psim.get_psim_version2)
 ```
+
+## Python def
+
+```python
+    def get_psim_version(self):
+        if not self.IsValid():
+            print("PSIM object was not loaded.")
+            return None;
+
+        GetPSIMVersion = getattr(self.psimHandle, "GetPSIMVersion")
+        if not GetPSIMVersion:
+            raise AttributeError(self.VersionErrorMessage)
+
+        # Create variables for the version info
+        nVersion = ctypes.c_int()
+        nSubVersion = ctypes.c_int()
+        nSubSubVersion = ctypes.c_int()
+        nSubSubSubVersion = ctypes.c_int()
+        nVertical = ctypes.c_int()
+
+        # Call the DLL function
+        ver = GetPSIMVersion(ctypes.byref(nVersion),
+                                ctypes.byref(nSubVersion),
+                                ctypes.byref(nSubSubVersion),
+                                ctypes.byref(nSubSubSubVersion),
+                                ctypes.byref(nVertical))
+
+        # print(f"PSIM version {nVersion.value}.{nSubVersion.value}.{nSubSubVersion.value}.{nSubSubSubVersion.value}")
+        # Check result if necessary, here assumed success
+        return (nVersion.value, nSubVersion.value, nSubSubVersion.value, nSubSubSubVersion.value)
+```
