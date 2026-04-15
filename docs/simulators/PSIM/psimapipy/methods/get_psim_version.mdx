@@ -10,8 +10,26 @@ slug: /psimapipy-get_psim_version
 ## Usage
 
 ```matlab
-psim.get_psim_version();
+% Import the module
+psim_module = py.importlib.import_module('psimapipy');
+
+% Create the PSIM object (empty string = auto-detect from registry)
+psim = psim_module.PSIM('');
+
+% Verify it loaded correctly
+if ~psim.IsValid()
+    error('PSIM failed to load');
+end
+
+ver = psim.get_psim_version();
+
+ver_cell = cell(ver);
+fprintf('PSIM version: %d.%d.%d.%d\n', ...
+    int32(ver_cell{1}), int32(ver_cell{2}), int32(ver_cell{3}), int32(ver_cell{4}));
+
+disp(char(psim.get_psim_version()));
 ```
+
 ## Python Help
 
 ```matlab

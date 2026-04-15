@@ -10,8 +10,20 @@ slug: /psimapipy-isvalid
 ## Usage
 
 ```matlab
-psim.IsValid();
+% Import the module
+psim_module = py.importlib.import_module('psimapipy');
+
+% Create the PSIM object (empty string = auto-detect from registry)
+psim = psim_module.PSIM('');
+
+% Verify it loaded correctly
+if ~psim.IsValid()
+    error('PSIM failed to load');
+end
+disp('PSIM loaded successfully');
+
 ```
+
 ## Python Help
 
 ```matlab
