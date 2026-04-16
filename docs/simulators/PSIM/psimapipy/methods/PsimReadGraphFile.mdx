@@ -111,4 +111,12 @@ py.help(psim.PsimReadGraphFile)
             print(f"Error: {e}")
         return result
 
+    def __private_OpenGraphFile(self, graphFilePath):
+        OpenGraphFile = getattr(self.psimHandle, "Graph_ReadFile")
+        if not OpenGraphFile:
+            raise AttributeError(self.VersionErrorMessage)
+        OpenGraphFile.restype = ctypes.c_int
+        #  int OpenGraphFile(const wchar_t *  szGraphFilePath)
+        grf = OpenGraphFile(ctypes.c_wchar_p(graphFilePath));  #returns 0 on error
+        return grf
 ```
