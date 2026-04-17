@@ -16,6 +16,10 @@ MATLAB requires a specific Python version. Check yours:
 pyenv
 ```
 
+```bash
+where python
+```
+
 MATLAB 2023b+ supports Python 3.9–3.11. Make sure your Python installation matches.
 
 **2. Tell MATLAB which Python to use** (if needed):
@@ -29,11 +33,8 @@ pyenv('Version', 'C:\Python311\python.exe')
 ## Basic Setup
 
 ```matlab
-% Add the folder containing Psim_Class.py to Python's path
-py.sys.path().insert(int32(0), 'C:\Altair\Altair_PSIM_2026\Python\Source\psimapipy-sources');
-
 % Import the module
-psim_module = py.importlib.import_module('Psim_Class');
+psim_module = py.importlib.import_module('psimapipy');
 
 % Create the PSIM object (empty string = auto-detect from registry)
 psim = psim_module.PSIM('');
@@ -72,6 +73,25 @@ end
 
 ---
 
+## Reading Graph Curves
+
+````matlab
+% 1. After Basic Setup
+
+% 2. Read File
+file_path = 'C:\sims\boost.smv';
+result = psim.PsimReadGraphFile(file_path);
+
+% Inspect the Graph container
+properties(result.Graph)
+
+% If 'curves' is a property, inspect the first curve
+first_curve = result.Graph.curves{1};
+properties(first_curve)
+```
+
+---
+
 ## Accessing Graph Curves
 
 ```matlab
@@ -100,7 +120,7 @@ for i = 1:n
     values(i) = double(curve{int32(i-1)});
 end
 plot(values);
-```
+````
 
 ---
 
