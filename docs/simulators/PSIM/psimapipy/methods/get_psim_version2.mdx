@@ -30,16 +30,57 @@ fprintf('PSIM version: %d.%d.%d.%d.%d\n', ...
 disp(char(psim.get_psim_version2()));
 ```
 
-## Python Help
+## MATLAB Function
 
 ```matlab
-py.help(psim.get_psim_version2)
+function [ver_array, ver_str] = get_psim_ver()
+% GET_PSIM_VER Gets the installed PSIM version.
+%
+% Usage:
+%   ver_array = get_psim_ver()
+%   [ver_array, ver_str] = get_psim_ver()
+
+% 1. Import and Initialize
+try
+    psim_module = py.importlib.import_module('psimapipy');
+    psim = psim_module.PSIM('');
+catch
+    error('Could not load psimapipy. Ensure Python is configured in MATLAB.');
+end
+
+if ~psim.IsValid()
+    error('PSIM object invalid. Check your PSIM license and registry.');
+end
+
+% 2. Get Version Tuple from Python: (Major, Minor, Sub, SubSub,Vertical)
+py_tuple = psim.get_psim_version2();
+ver_array = int16(py_tuple); % int de 16 bits
+
+% # Create variables for the version info
+% nVersion = c_int()
+% nSubVersion = c_int()
+% nSubSubVersion = c_int()
+% nSubSubSubVersion = c_int()
+% nVertical = c_int()
+% # vertical:  564:Windows_GUI,   864:Windows_PSIMSolver     800:Linux_PSIMSolver
+
+if ver_array(5) == 564
+    nVertical_char='(WindowsGUI)';
+elseif ver_array(5) == 864
+        nVertical_char='(WindowsPSIMSolver)';
+elseif ver_array(5) == 800
+        nVertical_char='(LinuxPSIMSolver)';
+else
+    nVertical_char='(Other)';
+end
+
+ver_str=sprintf('PSIM %d.%d.%d.%d.%d %s',ver_array(1),ver_array(2),ver_array(3),ver_array(4),ver_array(5),nVertical_char);
 ```
 
 ## Python def
 
 ```python
-    def get_psim_version(self):
+ def get_psim_version2(self):
         if not self.IsValid():
             print("PSIM object was not loaded.")
             return None;
@@ -62,7 +103,10 @@ py.help(psim.get_psim_version2)
                                 ctypes.byref(nSubSubSubVersion),
                                 ctypes.byref(nVertical))
 
-        # print(f"PSIM version {nVersion.value}.{nSubVersion.value}.{nSubSubVersion.value}.{nSubSubSubVersion.value}")
+        # vertical:  564:Windows_GUI,   864:Windows_PSIMSolver     800:Linux_PSIMSolver
+
+
+        # print(f"PSIM version {nVersion.value}.{nSubVersion.value}.{nSubSubVersion.value}.{nSubSubSubVersion.value} ({nVertical.value})")
         # Check result if necessary, here assumed success
-        return (nVersion.value, nSubVersion.value, nSubSubVersion.value, nSubSubSubVersion.value)
+        return (nVersion.value, nSubVersion.value, nSubSubVersion.value, nSubSubSubVersion.value, nVertical.value)
 ```

@@ -50,4 +50,12 @@ py.help(psim.SimulateData_from_kwargs)
         except Exception as e:
             print(f"Error: {e}")
         return PSIM_SimulateData(schFilePath, graphFilePath, simview_flag, nameValueList)
+
+class PSIM_SimulateData:
+    def __init__(self, schematicFilePath, grfFilePath, simview_flag, nameVal_List):
+        self.SchFilePath = schematicFilePath
+        self.GraphFilePath = grfFilePath
+        self.NameValueList = nameVal_List
+        self.SimviewFlag = simview_flag
+
 ```

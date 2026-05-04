@@ -10,13 +10,73 @@ slug: /psimapipy-psim_getprobes
 ## Usage
 
 ```matlab
-psim.Psim_GetProbes();
+% Usage:
+cols = psim_get_colnames("buck.sch")
 ```
 
-## Python Help
+## MATLAB function
 
 ```matlab
-py.help(psim.Psim_GetProbes)
+function colNames = psim_get_colnames(schFilePath)
+%PSIM_GET_COLNAMES Get probe names from a PSIM schematic
+%
+% Usage:
+%   cols = psim_get_colnames("buck.sch")
+
+    psim = psim_get_instance();
+
+    out = psim.Psim_GetProbes(schFilePath);
+
+    % Extract tuple safely
+    result   = double(out{1});
+    namesStr = string(out{2});
+    err      = string(out{4});
+
+    if result == 0
+        error("PSIM:GetProbesFailed", "%s", err);
+    end
+
+    % Handle both newline and null-separated formats
+    if contains(namesStr, newline)
+        colNames = strsplit(namesStr, newline);
+    else
+        colNames = strsplit(namesStr, char(0));
+    end
+
+    % Remove empty entries
+    colNames = colNames(colNames ~= "");
+end
+```
+
+```matlab function colNames = psim_get_probes(schFilePath)
+%PSIM_GET_COLNAMES Get probe names from a PSIM schematic
+%
+% Usage:
+%   cols = psim_get_probes("buck.sch")
+
+    psim = psim_get_instance();
+
+    out = psim.Psim_GetProbes(schFilePath);
+
+    % Extract tuple safely
+    result   = double(out{1});
+    namesStr = string(out{2});
+    err      = string(out{4});
+
+    if result == 0
+        error("PSIM:GetProbesFailed", "%s", err);
+    end
+
+    % Handle both newline and null-separated formats
+    if contains(namesStr, newline)
+        colNames = strsplit(namesStr, newline);
+    else
+        colNames = strsplit(namesStr, char(0));
+    end
+
+    % Remove empty entries
+    colNames = colNames(colNames ~= "");
+end
 ```
 
 ## Python def

@@ -13,10 +13,40 @@ slug: /psimapipy-psim_getundefinedparameters
 psim.Psim_GetUndefinedParameters();
 ```
 
-## Python Help
+## MATLAB function
 
 ```matlab
-py.help(psim.Psim_GetUndefinedParameters)
+function params = psim_get_undefined_params(schFilePath)
+
+psim = psim_get_instance();
+
+% --- Call Python ---
+out = psim.Psim_GetUndefinedParameters(schFilePath);
+
+if ~isa(out, 'py.tuple')
+    error("PSIM:APIError", "Unexpected return type.");
+end
+
+% --- Extract tuple safely ---
+result   = double(out{1});
+namesStr = string(out{2});
+count    = double(out{3});
+err      = string(out{4});
+
+% --- Check result ---
+if result == 0
+    error("PSIM:GetUndefinedFailed", err);
+end
+
+% --- Convert to MATLAB ---
+if strlength(namesStr) == 0
+    params = strings(0,1);
+    return;
+end
+
+params = splitlines(namesStr);
+params = params(params ~= "");
+
 ```
 
 ## Python def

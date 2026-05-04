@@ -32,9 +32,7 @@ py.help(psim.PsimSimulate)
         except Exception as e:
             print(f"Error: {e}")
         return res
-```
 
-```python
  def __private_kwargs_to_List(self, simview_flag, **kwargs):
         res = None
         try:
@@ -62,9 +60,7 @@ py.help(psim.PsimSimulate)
         except Exception as e:
             print(f"Error: {e}")
         return NameValueList, simview_flag
-```
 
-```python
 def __private_Simulate2(self, simType, schFilePath_or_Obj, graphFilePath, simview_flag, NameValueList) -> PSIM_result:
         #simType:  0:PSIM   11:HYPERSPICE   12:LT_SPICE
         result = PSIM_result(self)
