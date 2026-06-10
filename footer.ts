@@ -195,12 +195,16 @@ const footer: ThemeConfig["footer"] = {
           href: "https://ruseleredu.github.io/ea-docs/",
         },
         {
-          label: "LabSEC",
-          href: "https://ruseleredu.github.io/labsec/",
+          label: "IIoT Industrial",
+          href: "https://ruseleredu.github.io/iiot-docs/",
         },
         {
           label: "Moodle Docs",
           href: "https://ruseleredu.github.io/moodle-docs/",
+        },
+        {
+          label: "LabSEC",
+          href: "https://ruseleredu.github.io/labsec/",
         },
       ],
     },
