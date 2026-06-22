@@ -150,6 +150,7 @@ const config: Config = {
         "ini",
         "latex",
         "php",
+        "java",
       ],
     },
   } satisfies Preset.ThemeConfig,
