@@ -71,3 +71,45 @@ vm.vfs_cache_pressure=50
 ## Reference
 
 - https://gemini.google.com/share/6b9f7d8478cd
+
+## Increase Ubuntu /tmp Size
+
+- Open the filesystem table
+
+```bash
+nano /etc/fstab
+```
+
+- Add or modify the entry
+
+Scroll to the bottom of the file. Look for an existing line for /tmp.
+
+- If you see one, modify its size parameter.
+- If you don't see one, add this line at the very bottom (this example sets it to 2 Gigabytes, change 2G to 4G or more if needed):
+
+```bash
+tmpfs   /tmp   tmpfs   defaults,size=2G,mode=1777   0   0
+```
+
+- Apply the changes immediately
+
+```bash
+systemctl daemon-reload
+```
+
+```bash
+mount -o remount /tmp
+```
+
+- Verify the change
+
+```bash
+ df -h /tmp
+```
+
+- Your /tmp size should now properly show 2.0G!
+
+```bash
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           2.0G   32K  2.0G   1% /tmp
+```
