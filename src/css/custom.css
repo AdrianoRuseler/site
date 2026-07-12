@@ -117,3 +117,13 @@
   box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest);
   outline: none;
 }
+
+.course-banner {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.course-banner h2 {
+  margin: 0;
+}
