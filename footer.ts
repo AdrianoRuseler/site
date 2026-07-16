@@ -265,6 +265,10 @@ const footer: ThemeConfig["footer"] = {
           href: "https://sci-net.xyz/",
         },
         {
+          label: "FileCR",
+          href: "https://filecr.com",
+        },
+        {
           label: "SolidSQUAD",
           href: "https://x.com/TeAMSolidSQUAD",
         },
