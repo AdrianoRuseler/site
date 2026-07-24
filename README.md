@@ -114,3 +114,30 @@ npx docusaurus write-heading-ids --syntax mdx-comment --migrate
 ```bash
 node scripts/rename-md.js
 ```
+
+## Offline / Local Search for Docusaurus
+
+```bash
+npm install @cmfcmf/docusaurus-search-local
+```
+
+Add this plugin to the `plugins` array in `docusaurus.config.js`.
+
+```js
+const config = {
+  // ...
+  plugins: ["@cmfcmf/docusaurus-search-local"],
+
+  // or, if you want to specify options:
+
+  // ...
+  plugins: [
+    [
+      "@cmfcmf/docusaurus-search-local",
+      {
+        // Options here
+      },
+    ],
+  ],
+};
+```
