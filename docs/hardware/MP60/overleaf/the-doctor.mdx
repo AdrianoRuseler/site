@@ -26,52 +26,72 @@ bin/doctor
 
 You will see some output like this:
 
-```
+```bash
 ====== Overleaf Doctor ======
 - Host Information
     - Linux
     - Output of 'lsb_release -a':
-            No LSB modules are available.
-            Distributor ID:	Ubuntu
-            Description:	Ubuntu 20.04 LTS
-            Release:	20.04
-            Codename:	focal
+            Distributor ID:     Ubuntu
+            Description:        Ubuntu 26.04 LTS
+            Release:    26.04
+            Codename:   resolute
 - Dependencies
     - bash
         - status: present
-        - version info: 5.0.17(1)-release
+        - version info: 5.3.9(1)-release
     - docker
         - status: present
-        - version info: Docker version 23.0.6, build 369ce74a3c
-    - docker compose
-        - status: present
-        - version info: Docker Compose version v2.17.3
+        - version info: Docker version 29.5.3, build d1c06ef
     - realpath
         - status: present
-        - version info: realpath (GNU coreutils) 8.30
+        - version info: realpath (uutils coreutils) 0.8.0
     - perl
         - status: present
-        - version info: 5.030000
+        - version info: 5.040001
     - awk
         - status: present
-        - version info: GNU Awk 5.0.1, API: 2.0 (GNU MPFR 4.0.2, GNU MP 6.2.0)
+        - version info: GNU Awk 5.3.2, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)
+    - openssl
+        - status: present
+        - version info: OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+    - docker compose
+        - status: present
+        - version info: Docker Compose version v5.1.4
 - Docker Daemon
     - status: up
+    - server version: 29.5.3
 ====== Configuration ======
 - config/version
     - status: present
-    - version: 2.3.1
+    - version: 6.2.2
 - config/overleaf.rc
     - status: present
     - values
-        - OVERLEAF_DATA_PATH: data/sharelatex
+        - OVERLEAF_DATA_PATH: data/overleaf
+        - OVERLEAF_LOG_PATH: not set, keeping logs in container
         - SERVER_PRO: false
+        - SIBLING_CONTAINERS_ENABLED: false
+        - OVERLEAF_LISTEN_IP: 127.0.0.1
+        - OVERLEAF_PORT: 8077
         - MONGO_ENABLED: true
+        - MONGO_IMAGE: mongo
+        - MONGO_VERSION: 8.0
+        - MONGO_DATA_PATH: data/mongo
         - REDIS_ENABLED: true
+        - REDIS_IMAGE: redis:7.4
+        - REDIS_AOF_PERSISTENCE: true
+        - REDIS_DATA_PATH: data/redis
+        - NGINX_ENABLED: false
+        - GIT_BRIDGE_ENABLED: null
 - config/variables.env
     - status: present
+    - values
+        - SHARELATEX_FILESTORE_BACKEND: fs
+        - SHARELATEX_HISTORY_BACKEND: fs
+        - OVERLEAF_FILESTORE_BACKEND: fs
+        - OVERLEAF_HISTORY_BACKEND: fs
 ====== Warnings ======
-- None, all good
+! Detected SIBLING_CONTAINERS_ENABLED=false. When not using Sibling containers, users have full read and write access to the 'sharelatex' container resources (filesystem, network, environment variables) when running LaTeX compiles. Only use this mode in environments where all users are trusted and no isolation of users is required.
 ====== End ======
 ```
 

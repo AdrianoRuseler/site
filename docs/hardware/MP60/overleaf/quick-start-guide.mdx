@@ -21,13 +21,13 @@ available on your system.
 First, let's clone this git repository to your machine:
 
 ```sh
-$ git clone https://github.com/overleaf/toolkit.git ./overleaf-toolkit
+git clone https://github.com/overleaf/toolkit.git ./overleaf-toolkit
 ```
 
 Next let's move into this directory:
 
 ```sh
-$ cd ./overleaf-toolkit
+cd ./overleaf-toolkit
 ```
 
 For the rest of this guide, we will assume that you will run all subsequent commands from this directory.
@@ -37,7 +37,7 @@ For the rest of this guide, we will assume that you will run all subsequent comm
 Let's take a look at the structure of the repository:
 
 ```sh
-$ ls -l
+ls -l
 ```
 
 Which will print something like this:
@@ -60,13 +60,13 @@ The `README.mdx` file contains some useful information about the project, while 
 Let's create our local configuration, by running `bin/init`:
 
 ```sh
-$ bin/init
+bin/init
 ```
 
 Now check the contents of the `config/` directory
 
 ```sh
-$ ls config
+ls config
 overleaf.rc     variables.env     version
 ```
 
@@ -93,7 +93,7 @@ The Overleaf Toolkit uses `docker compose` to manage the overleaf docker contain
 Let's start the docker services:
 
 ```sh
-$ bin/up
+bin/up
 ```
 
 You should see some log output from the docker containers, indicating that the containers are running.
@@ -121,13 +121,13 @@ You should then be taken to the new project, where you will see a text editor an
 Let's look at the logs inside the container:
 
 ```sh
-$ bin/logs -f web
+bin/logs -f web
 ```
 
 You can also look at the logs for multiple services at once:
 
 ```sh
-$ bin/logs -f filestore docstore web clsi
+bin/logs -f filestore docstore web clsi
 ```
 
 ## TLS Proxy
@@ -151,7 +151,7 @@ The Overleaf Toolkit comes with a handy tool for debugging your installation: `b
 Let's run the `bin/doctor` script:
 
 ```sh
-$ bin/doctor
+bin/doctor
 ```
 
 We should see some output similar to this:
