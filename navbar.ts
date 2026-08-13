@@ -26,6 +26,10 @@ const navbarItems: NavbarItem[] = [
         label: "ELT82E - Eletrônica Analógica",
       },
       {
+        to: "/utfpr/ELT85B/folder", // Link to a page in your UTFPR docs
+        label: "ELT85B - IoT Industrial",
+      },
+      {
         to: "/utfpr/ELT74E/folder", // Link to a page in your UTFPR docs
         label: "ELT74E - Amplificadores Operacionais e Semicondutores",
       },
