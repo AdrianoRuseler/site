@@ -183,8 +183,8 @@ const footer: ThemeConfig["footer"] = {
           href: "https://ruseleredu.github.io/hil-docs/",
         },
         {
-          label: "STM32 Docs",
-          href: "https://ruseleredu.github.io/stm32doc/",
+          label: "MIC Docs",
+          href: "https://ruseleredu.github.io/mic-docs/",
         },
         {
           label: "Sistemas Digitais",
@@ -201,6 +201,10 @@ const footer: ThemeConfig["footer"] = {
         {
           label: "Moodle Docs",
           href: "https://ruseleredu.github.io/moodle-docs/",
+        },
+        {
+          label: "STM32 Docs",
+          href: "https://ruseleredu.github.io/stm32doc/",
         },
         {
           label: "LabSEC",
