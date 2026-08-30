@@ -273,8 +273,8 @@ const footer: ThemeConfig["footer"] = {
           href: "https://filecr.com",
         },
         {
-          label: "SolidSQUAD",
-          href: "https://x.com/TeAMSolidSQUAD",
+          label: "DJ Pool Records",
+          href: "https://djpoolrecords.com/",
         },
         {
           label: "haxNode",
