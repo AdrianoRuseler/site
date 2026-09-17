@@ -113,3 +113,79 @@ mount -o remount /tmp
 Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           2.0G   32K  2.0G   1% /tmp
 ```
+
+## Generate the Key Pair with PuTTYgen
+
+**Here's a complete guide to set up SSH key authentication for Ubuntu using PuTTYgen (Windows).**
+
+1. Open **PuTTYgen** (comes with PuTTY).
+2. Under **Parameters**:
+   - Select **RSA** (or **EdDSA** / Ed25519 if available — preferred).
+   - Set **Number of bits** to **4096** (for RSA) or leave default for Ed25519.
+3. Click **Generate**.
+4. Move your mouse randomly in the blank area until the progress bar fills.
+5. (Optional but recommended) Enter a **Key passphrase** for extra security.
+6. Click **Save private key** → save it as something like `id_rsa.ppk` (or `id_ed25519.ppk`).
+7. In the box labeled **"Public key for pasting into OpenSSH authorized_keys file"**, copy the entire text (starts with `ssh-rsa` or `ssh-ed25519`).
+
+### Add the Public Key to Your Ubuntu Server
+
+**Option A – If you can already log in with password:**
+
+```bash
+# On the Ubuntu server
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+nano ~/.ssh/authorized_keys
+```
+
+Paste the public key you copied from PuTTYgen (one long line), then save and exit.
+
+```bash
+chmod 600 ~/.ssh/authorized_keys
+```
+
+**Option B – From Windows (using the password once):**
+
+You can use `plink` or just SSH with password and paste it manually as above.
+
+### Configure PuTTY to Use the Private Key
+
+1. Open **PuTTY**.
+2. In **Session** → enter the Ubuntu server’s IP or hostname.
+3. Go to **Connection → SSH → Auth → Credentials**.
+4. Under **Private key file for authentication**, click **Browse** and select your `.ppk` file.
+5. (Optional) Go back to **Session**, enter a name under **Saved Sessions**, and click **Save**.
+6. Click **Open**.
+
+You should now log in without a password (only the key passphrase if you set one).
+
+### Disable Password Login on Ubuntu (Recommended)
+
+Once key auth is working:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Set these values:
+
+```
+PasswordAuthentication no
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+```
+
+Then restart SSH:
+
+```bash
+sudo systemctl restart ssh
+```
+
+### Tips
+
+- Prefer **Ed25519** keys if your PuTTYgen version supports them (newer and more secure).
+- Keep your `.ppk` file safe and never share it.
+- If you need the key in OpenSSH format (for use with other tools), in PuTTYgen go to **Conversions → Export OpenSSH key**.
+
+That’s it — you now have passwordless SSH authentication from Windows to Ubuntu using PuTTYgen.
