@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
+import ThemeCodeBlock from '@theme/CodeBlock';
 
 export type ActionType = 'create' | 'read' | 'update' | 'delete' | 'professor' | 'notas' | 'generated';
 
 export interface FileTreeProps {
+    /** Título do grupo/detalhes */
+    title?: string;
     /** Nome da pasta raiz principal */
     root?: string;
     /** Array de caminhos relativos com ações opcionais. Ex: ["wokwi.toml u", ".github/workflows/grade.yml d"] */
     files: string[];
+    /** Se deve envolver em uma tag <details> */
+    details?: boolean;
+    /** Se o <details> deve iniciar aberto */
+    defaultOpen?: boolean;
+    /**
+     * Mostra, abaixo da árvore, o `git conferir` (alias do Lab 01, 2.2) com os arquivos a criar,
+     * editar ou verificar (ações c, u, r). Default: só nas árvores sem `details`; as de visão
+     * geral ("no fim da aula") listam o projeto inteiro e acusariam FALTA em tudo.
+     */
+    check?: boolean;
 }
 
 interface TreeNode {
@@ -26,23 +39,42 @@ interface ActionConfig {
     border: string;
 }
 
+type InfimaColor = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger';
+
+// Gera a paleta de um badge a partir de uma cor semântica do Infima.
+// As variáveis *-contrast-* se adaptam automaticamente ao modo escuro.
+const infima = (color: InfimaColor) => ({
+    bg: `var(--ifm-color-${color}-contrast-background)`,
+    color: `var(--ifm-color-${color}-contrast-foreground)`,
+    border: `var(--ifm-color-${color}-dark)`,
+});
+
 // Mapeamento extensível para CRUD (Aceita iniciais c, r, u, d e termos em PT/EN)
 const ACTION_MAP: Record<string, ActionConfig> = {
     // CREATE (Adicionar / Criar)
-    c: { type: 'create', defaultLabel: 'Criar Aqui', bg: 'var(--ifm-color-info-lightest)', color: 'var(--ifm-color-info-darkest)', border: 'var(--ifm-color-info)' },
+    c: { type: 'create', defaultLabel: 'Criar Aqui', ...infima('info') },
     // READ (Verificar / Ler)
-    r: { type: 'read', defaultLabel: 'Verificar', bg: 'var(--ifm-color-primary-lightest)', color: 'var(--ifm-color-primary-darkest)', border: 'var(--ifm-color-primary)' },
+    r: { type: 'read', defaultLabel: 'Verificar', ...infima('primary') },
     // UPDATE (Editar / Atualizar)
-    u: { type: 'update', defaultLabel: 'Edite Aqui', bg: 'var(--ifm-color-warning-lightest)', color: 'var(--ifm-color-warning-darkest)', border: 'var(--ifm-color-warning)' },
+    u: { type: 'update', defaultLabel: 'Edite Aqui', ...infima('warning') },
     // DELETE (Remover / Deletar)
-    d: { type: 'delete', defaultLabel: 'Remover', bg: 'var(--ifm-color-danger-lightest)', color: 'var(--ifm-color-danger-darkest)', border: 'var(--ifm-color-danger)' },
+    d: { type: 'delete', defaultLabel: 'Remover', ...infima('danger') },
     // PROFESSOR (p)
-    p: { type: 'professor', defaultLabel: '(Professor)', bg: 'var(--ifm-color-secondary-lightest, #f0f0f0)', color: 'var(--ifm-color-secondary-darkest, #333)', border: 'var(--ifm-color-secondary, #ccc)' },
+    p: { type: 'professor', defaultLabel: '(Professor)', ...infima('secondary') },
     // NOTAS (n)
-    n: { type: 'notas', defaultLabel: '(Notas)', bg: 'var(--ifm-color-secondary-lightest, #f0f0f0)', color: 'var(--ifm-color-secondary-darkest, #333)', border: 'var(--ifm-color-secondary, #ccc)' },
+    n: { type: 'notas', defaultLabel: '(Notas)', ...infima('secondary') },
     // GENERATED / GERADO (g)
-    g: { type: 'generated', defaultLabel: 'Gerado', bg: 'var(--ifm-color-secondary-lightest, #f0f0f0)', color: 'var(--ifm-color-emphasis-700, #555)', border: 'var(--ifm-color-emphasis-400, #bbb)' },
+    g: {
+        type: 'generated',
+        defaultLabel: 'Gerado',
+        bg: 'var(--ifm-color-emphasis-100)',
+        color: 'var(--ifm-color-emphasis-700)',
+        border: 'var(--ifm-color-emphasis-400)',
+    },
 };
+
+// Estilo do badge após copiar o caminho
+const COPIED_STYLE = infima('success');
 
 function buildTree(paths: string[]): TreeNode {
     const treeRoot: TreeNode = { name: '', relativePath: '', isFolder: true, children: {} };
@@ -84,6 +116,22 @@ function buildTree(paths: string[]): TreeNode {
     });
 
     return treeRoot;
+}
+
+// Ações cujos arquivos têm de existir no repositório (vão para o `git conferir`).
+const CONFERIR: ActionType[] = ['create', 'update', 'read'];
+
+function caminhosParaConferir(paths: string[]): string[] {
+    const lista: string[] = [];
+    paths.forEach((rawPath) => {
+        const [pathPart, rawAction] = rawPath.trim().split(/\s+/);
+        const cfg = rawAction ? ACTION_MAP[rawAction.toLowerCase()] : undefined;
+        const caminho = (pathPart ?? '').replace(/\/+$/, '');
+        if (caminho && cfg && CONFERIR.includes(cfg.type) && !lista.includes(caminho)) {
+            lista.push(caminho);
+        }
+    });
+    return lista;
 }
 
 const getIcon = (name: string, isFolder: boolean) => {
@@ -140,9 +188,9 @@ function RenderBranch({ nodes, copiedPath, onCopy }: { nodes: TreeNode[]; copied
                                     fontSize: '0.75rem',
                                     borderRadius: '4px',
                                     fontWeight: 'bold',
-                                    backgroundColor: isCopied ? 'var(--ifm-color-success-lightest)' : actionCfg.bg,
-                                    color: isCopied ? 'var(--ifm-color-success-darkest)' : actionCfg.color,
-                                    border: `1px solid ${isCopied ? 'var(--ifm-color-success)' : actionCfg.border}`,
+                                    backgroundColor: isCopied ? COPIED_STYLE.bg : actionCfg.bg,
+                                    color: isCopied ? COPIED_STYLE.color : actionCfg.color,
+                                    border: `1px solid ${isCopied ? COPIED_STYLE.border : actionCfg.border}`,
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.2rem',
@@ -165,10 +213,18 @@ function RenderBranch({ nodes, copiedPath, onCopy }: { nodes: TreeNode[]; copied
     );
 }
 
-export default function FileTree({ root = '', files }: FileTreeProps): React.JSX.Element {
+export default function FileTree({
+    title,
+    root = '',
+    files,
+    details = false,
+    defaultOpen = true,
+    check = !details,
+}: FileTreeProps): React.JSX.Element {
     const [copiedPath, setCopiedPath] = useState<string | null>(null);
     const treeRoot = buildTree(files);
     const displayNodes = Object.values(treeRoot.children);
+    const conferir = check ? caminhosParaConferir(files) : [];
 
     const handleCopy = (path: string) => {
         navigator.clipboard.writeText(path);
@@ -176,22 +232,57 @@ export default function FileTree({ root = '', files }: FileTreeProps): React.JSX
         setTimeout(() => setCopiedPath(null), 2000);
     };
 
-    return (
+    const content = (
         <div style={{
-            margin: '1rem 0',
+            margin: details ? 0 : '1rem 0',
             padding: '1rem',
             borderRadius: 'var(--ifm-global-radius)',
-            border: '1px solid var(--ifm-color-emphasis-300)',
+            border: details ? 'none' : '1px solid var(--ifm-color-emphasis-300)',
             backgroundColor: 'var(--ifm-background-surface-color)',
             fontFamily: 'var(--ifm-font-family-monospace)',
             fontSize: '0.9rem'
         }}>
+            {!details && title && (
+                <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>
+                    {title}
+                </div>
+            )}
             {root && (
                 <div style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>
                     📂 {root}/
                 </div>
             )}
             <RenderBranch nodes={displayNodes} copiedPath={copiedPath} onCopy={handleCopy} />
+            {conferir.length > 0 && (
+                <div style={{ marginTop: '0.75rem', fontFamily: 'var(--ifm-font-family-base)' }}>
+                    <ThemeCodeBlock language="bash">
+                        {`git conferir ${conferir.join(' ')}`}
+                    </ThemeCodeBlock>
+                </div>
+            )}
         </div>
     );
+
+    if (details) {
+        return (
+            <details open={defaultOpen} style={{
+                marginBottom: '1rem',
+                padding: '1rem',
+                borderRadius: 'var(--ifm-global-radius)',
+                border: '1px solid var(--ifm-color-emphasis-300)',
+                backgroundColor: 'var(--ifm-background-surface-color)'
+            }}>
+                {title && (
+                    <summary style={{ cursor: 'pointer', fontWeight: 'bold', outline: 'none' }}>
+                        {title}
+                    </summary>
+                )}
+                <div style={{ marginTop: title ? '0.75rem' : 0 }}>
+                    {content}
+                </div>
+            </details>
+        );
+    }
+
+    return content;
 }
