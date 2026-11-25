@@ -37,16 +37,3 @@ djstudio:
     #    tiktok: djstudio_app
     #    reddit: djstudio
     # linkedin: djstudioapp
-
-midtownjack:
-  name: Midtown Jack
-  title: Music Producer making loud noises, DJing across Australia.
-  url: https://midtownjack.com/
-  image_url: https://i1.sndcdn.com/avatars-IbRNkh6XIaUAQgcD-Ild6hw-t200x200.jpg
-  # page:
-  # customize the url of the author page at /blog/authors/<permalink>
-  #  permalink: "/all-midtown-jack-articles"
-  page: false
-  socials:
-    youtube: MidtownJack
-    soundcloud: midtownjack
