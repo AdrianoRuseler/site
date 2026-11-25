@@ -1,20 +1,26 @@
 #!/bin/bash
 set -e
 
-ORG="ELT73A-S22-2026-2"
-GROUP_LIST="A B C D E F G H I J K L M X"   # ← not GROUPS
-NLAB=0
-LAB=$(printf "lab%02d" "$NLAB")
-TEMPLATE="$ORG/${LAB}-template"
+ORG="ELT85B-N21-2026-2"
+GROUP_LIST="A B C D E F G H I J K L M X P N"   # ← not GROUPS
+#GROUP_LIST="A B C D E F G H I J X P N"   # ← Populated GROUPS
+#GROUP_LIST="X"   # ← Populated GROUPS
+PJT="projeto"
+TEMPLATE="$ORG/${PJT}-template"
 
 echo "GROUP_LIST=[$GROUP_LIST]"
-echo "Creating ${LAB}-grupo-* from $TEMPLATE"
+echo "Creating ${PJT}-grupo-* from $TEMPLATE"
 echo ""
+
+if ! gh repo view "$TEMPLATE" &>/dev/null; then
+  echo "✗ Template $TEMPLATE não encontrado. Rode create-pjt-pio-template.sh antes."
+  exit 1
+fi
 
 for letter in $GROUP_LIST; do
   GROUP_LOWER=$(echo "$letter" | tr '[:upper:]' '[:lower:]')
   TEAM_SLUG="grupo-${GROUP_LOWER}"
-  REPO="${LAB}-grupo-${GROUP_LOWER}"
+  REPO="${PJT}-grupo-${GROUP_LOWER}"
 
   echo "→ $REPO  (team: $TEAM_SLUG)"
 
@@ -24,7 +30,7 @@ for letter in $GROUP_LIST; do
     gh repo create "$ORG/$REPO" \
       --private \
       --template "$TEMPLATE" \
-      --description "LAB$(printf '%02d' "$NLAB") - Grupo $letter"
+      --description "Projeto Final - Grupo $letter"
   fi
 
   if gh api --method PUT --silent \
