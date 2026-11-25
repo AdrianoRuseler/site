@@ -183,12 +183,20 @@ const footer: ThemeConfig["footer"] = {
           href: "https://ruseleredu.github.io/hil-docs/",
         },
         {
-          label: "MIC Docs",
+          label: "MIC-ESP32",
           href: "https://ruseleredu.github.io/mic-docs/",
+        },
+        {
+          label: "MIC-STM32",
+          href: "https://ruseleredu.github.io/stm32doc/",
         },
         {
           label: "Sistemas Digitais",
           href: "https://ruseleredu.github.io/sd-docs/",
+        },
+        {
+          label: "Eletrônica Digital",
+          href: "https://ruseleredu.github.io/ed-docs/",
         },
         {
           label: "Analógica",
@@ -201,10 +209,6 @@ const footer: ThemeConfig["footer"] = {
         {
           label: "Moodle Docs",
           href: "https://ruseleredu.github.io/moodle-docs/",
-        },
-        {
-          label: "STM32 Docs",
-          href: "https://ruseleredu.github.io/stm32doc/",
         },
         {
           label: "LabSEC",
